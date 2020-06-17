@@ -10,10 +10,9 @@ namespace ManageEXP.Domain.ValueObjects
     {
         public ZabbixRequest(string jsonrpc, string method, dynamic parameters, int id, string auth)
         {
+            this.parameters = ReferenceEquals(null, parameters) ? new object[0] : JsonConvert.DeserializeObject<ExpandoObject>(parameters.ToString());         
             this.jsonrpc = jsonrpc;
             this.method = method;
-            var deserializedParams = JsonConvert.DeserializeObject<ExpandoObject>(parameters.ToString());
-            this.parameters = deserializedParams;
             this.id = id;
             this.auth = auth;
         }

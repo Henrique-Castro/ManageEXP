@@ -27,5 +27,13 @@ namespace ManageEXP.WebApi.Controllers
 
             return Ok(response.result);
         }
+        
+        [HttpPost("Logout")]
+        public async Task<IActionResult> LogoutAsync()
+        {
+            ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("user.logout", null);
+
+            return Ok(response.result);
+        }
     }
 }

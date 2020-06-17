@@ -35,6 +35,10 @@ namespace ManageEXP.Domain.Services
             {
                 ZabbixSettings.Token = response.result;
             }
+            if(method == "user.logout" && response.error == null)
+            {
+                ZabbixSettings.Token = string.Empty;
+            }
 
             return response;
         }
