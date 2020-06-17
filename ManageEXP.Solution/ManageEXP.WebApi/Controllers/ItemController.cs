@@ -14,19 +14,19 @@ namespace ManageEXP.WebApi.Controllers
     [ApiController]
     public class ItemController : ControllerBase
     {
-        readonly IItemService _itemService;
+        readonly IZabbixService _zabbixService;
 
-        public ItemController(ItemService service)
+        public ItemController(IZabbixService service)
         {
-            _itemService = service;
+            _zabbixService = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetItem(ZabbixRequest request)
+        public async Task<IActionResult> GetItem([FromBody] dynamic parameters)
         {
-            var result = await _itemService.GetItem(request);
+            ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("item.get", parameters);
 
-            return Ok(result);
+            return Ok(response.result);
         }
     }
 }

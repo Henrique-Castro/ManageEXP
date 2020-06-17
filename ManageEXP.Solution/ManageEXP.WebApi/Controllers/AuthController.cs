@@ -11,15 +11,21 @@ namespace ManageEXP.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ZabbixController : ControllerBase
+    public class AuthController : ControllerBase
     {
         readonly IZabbixService _zabbixService;
 
-        public ZabbixController(IZabbixService service)
+        public AuthController(IZabbixService service)
         {
             _zabbixService = service;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> LoginAsync([FromBody]dynamic parameters)
+        {
+            ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("user.login", parameters);
 
+            return Ok(response.result);
+        }
     }
 }

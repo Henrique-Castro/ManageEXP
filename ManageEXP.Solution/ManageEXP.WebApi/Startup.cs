@@ -51,6 +51,7 @@ namespace ManageEXP.WebApi
 
             services.AddScoped(typeof(IItemService), typeof(ItemService));
             services.AddScoped(typeof(IZabbixService), typeof(ZabbixService));
+            services.AddScoped(typeof(IAuthService), typeof(AuthService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

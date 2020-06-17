@@ -17,39 +17,39 @@ namespace ManageEXP.Domain.Services
         readonly ZabbixSettings _settings;
         static readonly HttpClient _httpClient = new HttpClient();
 
-        string _user;
-        string _auth;
-
         public ZabbixService(IOptions<ZabbixSettings> configuration)
         {
             _settings = configuration.Value;
             _settings.Url = new Uri(_settings.Url).ToString();
         }
 
-        public async Task<string> LoginAsync(dynamic parameters)
+        public async Task<ZabbixResponse> GetZabbixResponseAsync(string method, dynamic parameters)
         {
-            var result = await GetZabbixResponseAsync("user.login", parameters);
+            ZabbixRequest request = new ZabbixRequest(_settings.Version, method, parameters, 1, ZabbixSettings.Token);
 
-            _auth = result;
+            string jsonResponse = await SendRequestAsync(request);
 
-            return _auth;
+            var response = JsonConvert.DeserializeObject<ZabbixResponse>(jsonResponse);
+
+            if (method == "user.login" && response.error == null)
+            {
+                ZabbixSettings.Token = response.result;
+            }
+
+            return response;
         }
 
-        public async Task<object> GetZabbixResponseAsync(string method, object parameters)
+
+
+        private async Task<string> SendRequestAsync(ZabbixRequest request)
         {
-            var deserializedParams = JsonConvert.DeserializeObject<ExpandoObject>(parameters.ToString());
-
-            var request = new ZabbixRequest(_settings.Version, method, deserializedParams, 1, _auth);
-
             var body = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
 
             var response = await _httpClient.PostAsync(_settings.Url, body);
 
             var content = await response.Content.ReadAsStringAsync();
 
-            var result = JsonConvert.DeserializeObject<ZabbixResponse<string>>(content);
-
-            return result.result;
+            return content;
         }
     }
 }

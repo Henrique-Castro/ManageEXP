@@ -9,5 +9,6 @@ namespace ManageEXP.Domain.AppSettings
     {
         public string Url { get; set; }
         public string Version { get; set; }
+        public static string Token = null;
     }
 }
