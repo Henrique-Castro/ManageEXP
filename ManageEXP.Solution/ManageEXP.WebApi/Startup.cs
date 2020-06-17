@@ -49,7 +49,7 @@ namespace ManageEXP.WebApi
             services.Configure<ZabbixSettings>(
                 Configuration.GetSection("Zabbix"));
 
-            services.AddScoped(typeof(IItemService), typeof(ItemService));
+            services.AddScoped(typeof(IZabbixService), typeof(ZabbixService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

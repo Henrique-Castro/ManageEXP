@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ManageEXP.Domain.Interfaces.Services
 {
-    public interface IItemService
+    public interface IZabbixService
     {
-        Task<object> GetItem(ZabbixRequest request);
+        Task<ZabbixResponse> GetZabbixResponseAsync(string method, object parameters);
     }
 }
