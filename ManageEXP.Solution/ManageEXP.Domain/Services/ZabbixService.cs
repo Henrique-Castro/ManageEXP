@@ -39,8 +39,6 @@ namespace ManageEXP.Domain.Services
             return response;
         }
 
-
-
         private async Task<string> SendRequestAsync(ZabbixRequest request)
         {
             var body = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
