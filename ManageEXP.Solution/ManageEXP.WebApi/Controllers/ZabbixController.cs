@@ -20,6 +20,19 @@ namespace ManageEXP.WebApi.Controllers
             _zabbixService = service;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> SetZabbixAddress([FromBody] string address)
+        {
+            var result = await _zabbixService.SetZabbixAddress(address);
 
+            if (result)
+            {
+                return Ok("Endereço inserido com sucesso.");
+            }
+            else
+            {
+                return BadRequest("Falha na inserção do endereço.");
+            }
+        }
     }
 }

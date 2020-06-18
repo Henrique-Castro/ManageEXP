@@ -7,8 +7,8 @@ namespace ManageEXP.Domain.AppSettings
 {
     public class ZabbixSettings
     {
-        public string Url { get; set; }
-        public string Version { get; set; }
+        public static string Url { get; set; }
+        public static string Version { get; set; }
         public static string Token = null;
     }
 }

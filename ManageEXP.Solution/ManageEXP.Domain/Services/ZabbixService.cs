@@ -20,12 +20,11 @@ namespace ManageEXP.Domain.Services
         public ZabbixService(IOptions<ZabbixSettings> configuration)
         {
             _settings = configuration.Value;
-            _settings.Url = new Uri(_settings.Url).ToString();
         }
 
         public async Task<ZabbixResponse> GetZabbixResponseAsync(string method, dynamic parameters)
         {
-            ZabbixRequest request = new ZabbixRequest(_settings.Version, method, parameters, 1, ZabbixSettings.Token);
+            ZabbixRequest request = new ZabbixRequest(ZabbixSettings.Version, method, parameters, 1, ZabbixSettings.Token);
 
             string jsonResponse = await SendRequestAsync(request);
 
@@ -35,19 +34,45 @@ namespace ManageEXP.Domain.Services
             {
                 ZabbixSettings.Token = response.result;
             }
-            if(method == "user.logout" && response.error == null)
+            if (method == "user.logout" && response.error == null)
             {
                 ZabbixSettings.Token = string.Empty;
+                ZabbixSettings.Url = string.Empty;
             }
 
             return response;
+        }
+
+        public async Task<bool> SetZabbixAddress(string address)
+        {
+            ZabbixRequest request = new ZabbixRequest(ZabbixSettings.Version, "apiinfo.version", null, 1, null);
+
+            var body = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync(address, body);
+
+            var content = await response.Content.ReadAsStringAsync();
+
+            var result = JsonConvert.DeserializeObject<ZabbixResponse>(content);
+
+            if (result.error == null)
+            {
+                ZabbixSettings.Url = address;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private async Task<string> SendRequestAsync(ZabbixRequest request)
         {
             var body = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PostAsync(_settings.Url, body);
+            var uri = new Uri(ZabbixSettings.Url);
+
+            var response = await _httpClient.PostAsync(uri, body);
 
             var content = await response.Content.ReadAsStringAsync();
 
