@@ -14,7 +14,7 @@ namespace ManageEXP.Domain.ValueObjects
             this.jsonrpc = jsonrpc;
             this.method = method;
             this.id = id;
-            this.auth = auth;
+            this.auth = auth == "" ? null : auth;
         }
 
         public string jsonrpc { get; set; }
