@@ -1,36 +1,44 @@
 export default {
     spacing: {
         none: 0,
-        xxxSmall: 2,
-        xxSmall: 6,
-        xSmall: 10,
-        small: 14,
-        medium: 18,
-        large: 24,
-        xLarge: 30,
+        ultraSmall: 2,
+        xxxxSmall: 4,
+        xxxSmall: 8,
+        xxSmall: 12,
+        xSmall: 16,
+        small: 20,
+        medium: 24,
+        large: 28,
+        xLarge: 32,
         xxLarge: 36,
-        xxxLarge: 42,
-        xxxxLarge: 48,
-        ultraLarge: 62,
+        xxxLarge: 40,
+        xxxxLarge: 44,
+        ultraLarge: 48,
     },
     borderRadius: {
         xxSmall: 4,
-        xSmall: 6,
+        xSmall: 8,
         small: 12,
         medium: 16,
+        large: 20,
     },
     button: {
-        font: 30,
-        height: 70,
+        fontSmall: 12,
+        fontMedium: 16,
+        fontLarge: 20,
+        height: 50,
     },
     input: {
-        font: 25,
+        fontSmall: 12,
+        fontMedium: 16,
         height: 45,
     },
 };
 
 export interface UnitPropsSpacing {
     none: number;
+    ultraSmall: number;
+    xxxxSmall: number;
     xxxSmall: number;
     xxSmall: number;
     xSmall: number;
@@ -49,15 +57,19 @@ export interface UnitPropsBorder {
     xSmall: number;
     small: number;
     medium: number;
+    large: number;
 };
 
 export interface UnitPropsButton {
-    font: number;
+    fontSmall: number;
+    fontMedium: number;
+    fontLarge: number;
     height: number;
 };
 
 export interface UnitPropsInput {
-    font: number;
+    fontSmall: number;
+    fontMedium: number;
     height: number;
 };
 

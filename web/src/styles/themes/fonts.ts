@@ -7,7 +7,9 @@ export default {
 };
 
 export interface FontsProps {
+    robotoLightItalic: string,
     robotoMedium: string,
+    robotoMediumItalic: string,
     robotoBold: string, 
     robotoBlack: string,
 };

@@ -1,18 +1,26 @@
 export default {
-    main: '#FFFFFF',
-    primary: '#FFFFFF',
-    secondary: '#FFFFFF',
-    tertiary: '#FFFFFF',
-    quaternary: '#FFFFFF',
-    quinary: '#FFFFFF',
-    senary: '#FFFFFF',
+    // Primary palette
+    primary: '#227ABA',
+    secondary: '#2B3254',
+    tertiary: '#F47F38',
+    quaternary: '#191919',
+    quinary: '#B3B3B3',
+    white: '#FFFFFF',
+
+    // Background palette
+    primaryBackground: '#F0F1F2',
+    secondaryBackground: '#FDFDFE',
+
+    // Secondary palette
+    success: '#0AD60A',
+    danger: '#D60E0A',
+    warning: '#D6D60A',
 }
 
 export interface ColorsPropsBackground {
     primary: string;
     secondary: string;
     tertiary: string;
-    error: string;
 }
 
 export interface ColorsPropsText {
@@ -20,7 +28,7 @@ export interface ColorsPropsText {
     secondary: string;
     tertiary: string;
     quaternary: string;
-    disabled: string;
+    quinary: string;
     white: string;
 }
 
