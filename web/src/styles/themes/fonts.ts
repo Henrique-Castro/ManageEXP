@@ -1,5 +1,7 @@
 export default {
+    robotoLightItalic: 'Roboto Light Italic',
     robotoMedium: 'Roboto Medium',
+    robotoMediumItalic: 'Roboto Medium Italic',
     robotoBold: 'Roboto Bold',
     robotoBlack: 'Roboto Black',
 };
