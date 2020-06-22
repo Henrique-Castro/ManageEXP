@@ -14,6 +14,7 @@ export default createGlobalStyle`
     html,
     body {
         font-family: Arial, Helvetica, sans-serif;
+        background-color: '#FDFDFE';
         -webkit-font-smoothing: antialiased;
     };
 
