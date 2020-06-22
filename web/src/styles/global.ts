@@ -13,8 +13,8 @@ export default createGlobalStyle`
 
     html,
     body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: '#FDFDFE';
+        font-family: ${({ theme }) => theme.fonts.robotoBold} Arial, Helvetica, sans-serif;
+        background-color: ${({ theme }) => theme.colors.background.secondary};
         -webkit-font-smoothing: antialiased;
     };
 
