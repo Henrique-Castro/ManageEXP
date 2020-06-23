@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function Clientes() {
-    return <h1>Clientes</h1>;
+function Certificados() {
+    useEffect(() => {
+        document.title = "Certificados | ManageEXP";
+    }, []);
+
+    return <h1>Certificados</h1>;
 };
 
-export default Clientes;
+export default Certificados;

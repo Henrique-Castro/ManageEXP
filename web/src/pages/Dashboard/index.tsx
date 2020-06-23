@@ -1,9 +1,13 @@
-import React, { ChangeEvent } from 'react';
+import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
 function Dashboard() {
     const { signed, signOut } = useAuth();
+
+    useEffect(() => {
+        document.title = "Dashboard | ManageEXP";
+    }, []);
 
     function handleSignOut() {
         signOut();
