@@ -1,13 +1,22 @@
 import React from 'react';
+import { useAuth } from '../contexts/auth';
 
 // Routes
-import AppRoute from './app.routes';
-import AuthRoute from './auth.routes';
+import AppRoutes from './app.routes';
+import AuthRoutes from './auth.routes';
 
 const Routes: React.FC = () => {
-    return(
-        <div className="">Okk</div>
-    );
-}
+    const { signed, loading } = useAuth();
+
+    if (loading) {
+        return (
+            <div>
+                <span>Carregandoo ...</span>
+            </div>
+        );
+    };
+
+    return signed ? <AppRoutes /> : <AuthRoutes />;
+};
 
 export default Routes;
