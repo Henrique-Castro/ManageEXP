@@ -67,8 +67,8 @@ export const LightTheme: DefaultTheme = {
     },
     fonts: {
         robotoLightItalic: fonts.robotoLightItalic,
-        robotoMedium: fonts.robotoMedium,
-        robotoMediumItalic: fonts.robotoMediumItalic,
+        robotoRegular: fonts.robotoRegular,
+        robotoItalic: fonts.robotoItalic,
         robotoBold: fonts.robotoBold,
         robotoBlack: fonts.robotoBlack,
     },

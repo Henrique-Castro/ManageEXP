@@ -17,16 +17,15 @@ function Login() {
 
     return (
         <Div
-            width={200}
-            height={200}
+            width='100wh'
+            height='100vh'
             padding={["medium", "medium"]}
-            position='absolute'
-            left={50}
-            top={50}
             backgroundColor='primary'
             display='flex'
+            justifyContent='center'
+            alignItems='center'
         >
-            <button onClick={handleSignIn}>Entrar</button>
+            <h1 onClick={handleSignIn}>Teste</h1>
         </Div>
     );
 };
