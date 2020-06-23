@@ -7,14 +7,6 @@ import fonts, { FontsProps } from './fonts';
 
 import units, { UnitsProps } from './units';
 
-declare module 'styled-components' {
-    export interface DefaultTheme {
-        colors: ColorsProps;
-        units: UnitsProps;
-        fonts: FontsProps;
-    }
-}
-
 export const LightTheme: DefaultTheme = {
     colors: {
         background: {
