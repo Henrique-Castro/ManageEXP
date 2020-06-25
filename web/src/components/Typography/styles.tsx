@@ -9,10 +9,6 @@ export const BaseTitle = styled.p<PropsStyledBaseTitle>`
   font-size: ${({ theme, fontSize }) =>
     fontSize ? theme.fonts.size[fontSize] : theme.fonts.size.m}px;
 
-  ${({ weight }) => (weight ? { fontWeight: weight } : '')};
-
-  ${({ align }) => (align ? { textAlign: align } : '')};
-
   ${({ lineHeight, theme }) =>
     lineHeight && { 'line-height': theme.units.spacing[lineHeight] }};
 
@@ -26,12 +22,4 @@ export const BaseTitle = styled.p<PropsStyledBaseTitle>`
 
   ${({ marginRight, theme }) =>
     marginRight && { 'margin-right': theme.units.spacing[marginRight] }};
-
-  ${({ textDecorationStyle }) =>
-    textDecorationStyle ? { textDecoration: textDecorationStyle } : ''};
-    
-  ${({ textDecorationStyleColor, theme }) =>
-    textDecorationStyleColor
-      ? { textDecorationColor: theme.colors.text[textDecorationStyleColor] }
-      : ''};
 `;

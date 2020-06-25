@@ -13,8 +13,6 @@ export interface PropsBaseTitle extends TextProps {
   align?: 'center' | 'left' | 'right';
   weight?: 'bold' | 'normal';
   lineHeight?: UnitsSpacingOptions;
-  textDecorationStyle?: 'underline' | 'overline' | 'line-through';
-  textDecorationStyleColor?: ColorsTextOptions;
   numberOfLines?: number;
   marginLeft?: UnitsSpacingOptions;
   marginRight?: UnitsSpacingOptions;
@@ -29,8 +27,6 @@ export interface PropsStyledBaseTitle {
   marginLeft?: UnitsSpacingOptions;
   marginRight?: UnitsSpacingOptions;
   lineHeight?: UnitsSpacingOptions;
-  textDecorationStyle?: 'underline' | 'overline' | 'line-through';
-  textDecorationStyleColor?: ColorsTextOptions;
   fontSize?: TextUnits;
   fontFamily?: TextOptions;
 }
