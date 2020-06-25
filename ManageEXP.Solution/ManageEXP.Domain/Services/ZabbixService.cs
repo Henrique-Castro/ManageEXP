@@ -28,18 +28,8 @@ namespace ManageEXP.Domain.Services
 
             string jsonResponse = await SendRequestAsync(request);
 
-            var response = JsonConvert.DeserializeObject<ZabbixResponse>(jsonResponse);
-
-            if (method == "user.login" && response.error == null)
-            {
-                ZabbixSettings.Token = response.result;
-            }
-            if (method == "user.logout" && response.error == null)
-            {
-                ZabbixSettings.Token = string.Empty;
-                ZabbixSettings.Url = string.Empty;
-            }
-
+            var response = JsonConvert.DeserializeObject<ZabbixResponse>(jsonResponse);                   
+            
             return response;
         }
 

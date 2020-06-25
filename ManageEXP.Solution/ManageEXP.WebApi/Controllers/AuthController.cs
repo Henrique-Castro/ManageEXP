@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ManageEXP.Domain.AppSettings;
 using ManageEXP.Domain.Interfaces.Services;
 using ManageEXP.Domain.ValueObjects;
 using Microsoft.AspNetCore.Http;
@@ -25,6 +26,11 @@ namespace ManageEXP.WebApi.Controllers
         {
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("user.login", parameters);
 
+            if (response.error == null)
+            {
+                ZabbixSettings.Token = response.result;
+            }
+
             return Ok(response.result);
         }
         
@@ -32,6 +38,12 @@ namespace ManageEXP.WebApi.Controllers
         public async Task<IActionResult> LogoutAsync()
         {
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("user.logout", null);
+
+            if (response.error == null)
+            {
+                ZabbixSettings.Token = string.Empty;
+                ZabbixSettings.Url = string.Empty;
+            }
 
             return Ok(response.result);
         }
