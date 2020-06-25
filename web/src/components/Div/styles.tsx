@@ -12,13 +12,15 @@ const Div = styled.div<CustomProps>`
 `;
 
 const teste = (
-    spacing: UnitPropsSpacing,
-    propertyArray: keyof Array<UnitPropsSpacing> | 'auto' | undefined,
+    spacing: UnitPropsSpacing | any,
+    propertyArray: keyof UnitPropsSpacing[] | any[] | undefined,
 ): string => {
     if (Array.isArray(propertyArray)) {
-        const value = '';
+        const padding = propertyArray.map((value: keyof UnitPropsSpacing | undefined | string) => {
+            return `${spacing[value || DEFAULT_SPACING]}px`;
+        }).join(' ');
 
-        console.log(propertyArray.map(value => value).join(', '));
+        return padding;
     };
 
     return `${spacing[DEFAULT_SPACING]}px`;
@@ -47,10 +49,13 @@ export const Custom = styled(Div) <CustomGridProps>`
 
     margin-right: ${({ theme, marginRight }) =>
         getSpacingUnity(theme.units.spacing, marginRight)};
+/* 
+    padding: ${({ theme, padding }) => teste(theme.units.spacing, padding?.flat())}; */
 
-    padding: ${({ theme, padding }) => padding ? padding.toString() : ''};
+    ${({ theme, padding }) =>
+        padding && { padding: teste(theme.units.spacing, padding?.flat()) }}
 
-    padding-top: ${({ theme, paddingTop }) =>
+    /* padding-top: ${({ theme, paddingTop }) =>
         getSpacingUnity(theme.units.spacing, paddingTop)};
 
     padding-bottom: ${({ theme, paddingBottom }) =>
@@ -61,7 +66,7 @@ export const Custom = styled(Div) <CustomGridProps>`
 
     padding-right: ${({ theme, paddingRight }) =>
         getSpacingUnity(theme.units.spacing, paddingRight)};
-    
+     */
     position: ${({ position }) => position || 'relative'};
 
     ${({ position, top }) =>

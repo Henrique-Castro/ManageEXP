@@ -17,9 +17,7 @@ function Login() {
 
     return (
         <Div
-            width='100wh'
-            height='100vh'
-            padding={["medium", "medium"]}
+            padding={["medium", "small"]} 
             backgroundColor='primary'
             display='flex'
             justifyContent='center'

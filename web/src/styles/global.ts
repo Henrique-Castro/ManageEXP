@@ -8,7 +8,6 @@ import RobotoBlack from '../assets/fonts/Roboto-Black.ttf';
 
 export default createGlobalStyle`
 
-
     @font-face {
         font-family: 'Roboto Light Italic';
         font-style: normal;
@@ -55,7 +54,7 @@ export default createGlobalStyle`
 
     html,
     body {
-        font-family: ${({ theme }) => theme.fonts.robotoRegular}, Arial, Helvetica, sans-serif;
+        font-family: ${({ theme }) => theme.fonts.robotoBlack}, Arial, Helvetica, sans-serif;
         background-color: ${({ theme }) => theme.colors.background.secondary};
         -webkit-font-smoothing: antialiased;
     };
