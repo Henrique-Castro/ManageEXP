@@ -28,5 +28,34 @@ namespace ManageEXP.WebApi.Controllers
 
             return Ok(response.result);
         }
+
+        // Parameters:
+        //   
+        //     É importante que nos campos hostid e interface da requisição sejam passados
+        //     valores que existem no zabbix.
+        //
+        [HttpPost]
+        public async Task<IActionResult> CreateItem([FromBody]dynamic parameters)
+        {         
+            ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("item.create", parameters);
+
+            return Ok(response.result);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateItem([FromBody]dynamic parameters)
+        {
+            ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("item.update", parameters);
+
+            return Ok(response.result);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteItem([FromBody]dynamic parameters)
+        {
+            ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("item.delete", parameters);
+
+            return Ok(response.result);
+        }
     }
 }
