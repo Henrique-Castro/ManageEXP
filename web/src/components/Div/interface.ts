@@ -66,6 +66,8 @@ export interface CustomGridProps {
     height?: number | string;
     minWidth?: number | string;
     minHeight?: number | string;
+    maxWidth?: number | string;
+    maxHeight?: number | string;
 
     display?: DisplayProps;
 
@@ -80,17 +82,18 @@ export interface CustomGridProps {
     alignItems?: GridAlign;
     justifyContent?: GridAlign;
 
+    padding?: Array<UnitsSpacingOptions>;
+    marging?: Array<UnitsSpacingOptions>;
+
     marginTop?: UnitsSpacingOptions | 'auto';
-    marginBottom?: UnitsSpacingOptions;
-    marginLeft?: UnitsSpacingOptions;
-    marginRight?: UnitsSpacingOptions;
+    marginBottom?: UnitsSpacingOptions | 'auto';
+    marginLeft?: UnitsSpacingOptions | 'auto';
+    marginRight?: UnitsSpacingOptions | 'auto';
 
     paddingTop?: UnitsSpacingOptions;
     paddingBottom?: UnitsSpacingOptions;
     paddingLeft?: UnitsSpacingOptions;
     paddingRight?: UnitsSpacingOptions;
-
-    padding?: Array<UnitsSpacingOptions>;
 
     backgroundColor?: ColorsBackgroundOptions;
     opacity?: number;
@@ -102,21 +105,28 @@ export interface CustomGridProps {
 };
 
 export interface CustomProps extends Partial<GridAlignProps> {
-    marginTop?: UnitsSpacingOptions | 'auto';
-    marginBottom?: UnitsSpacingOptions;
-    marginLeft?: UnitsSpacingOptions;
-    marginRight?: UnitsSpacingOptions;
-    paddingTop?: UnitsSpacingOptions;
-    paddingBottom?: UnitsSpacingOptions;
-    paddingLeft?: UnitsSpacingOptions;
-    paddingRight?: UnitsSpacingOptions;
+    width?: number | string;
+    height?: number | string;
+
     position?: 'absolute' | 'relative';
     top?: number;
     right?: number;
     bottom?: number;
     left?: number;
-    width?: number | string;
-    height?: number | string;
+    
+    padding?: Array<UnitsSpacingOptions>;
+    margin?: Array<UnitsSpacingOptions>;
+
+    marginTop?: UnitsSpacingOptions | 'auto';
+    marginBottom?: UnitsSpacingOptions | 'auto';
+    marginLeft?: UnitsSpacingOptions | 'auto';
+    marginRight?: UnitsSpacingOptions | 'auto';
+
+    paddingTop?: UnitsSpacingOptions;
+    paddingBottom?: UnitsSpacingOptions;
+    paddingLeft?: UnitsSpacingOptions;
+    paddingRight?: UnitsSpacingOptions;
+
     flexWrap?: FlexWrapProps;
     opacity?: number;
 };
