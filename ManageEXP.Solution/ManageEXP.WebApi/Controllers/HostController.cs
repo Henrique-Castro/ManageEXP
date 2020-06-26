@@ -6,6 +6,7 @@ using ManageEXP.Domain.Interfaces.Services;
 using ManageEXP.Domain.ValueObjects;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace ManageEXP.WebApi.Controllers
 {
@@ -28,9 +29,19 @@ namespace ManageEXP.WebApi.Controllers
             return Ok(response.result);
         }
 
+
+
+        // Parameters:
+        //   
+        //     É importante que nos campos groupid e templateid da requisição sejam passados
+        //     valores que existem no zabbix.
+        //
         [HttpPost]
         public async Task<IActionResult> CreateHost([FromBody]dynamic parameters)
         {
+            //ZabbixResponse templateResponse = await _zabbixService.GetZabbixResponseAsync("template.get", JsonConvert.SerializeObject(new { output = "extend" }));
+            //ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("usermacro.get", JsonConvert.SerializeObject(new { output = "extend" }));
+
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("host.create", parameters);
 
             return Ok(response.result);
