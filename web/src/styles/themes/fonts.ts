@@ -1,12 +1,12 @@
 export default {
     size: {
-        xxs: 8,
-        xs: 10,
+        xxs: 4,
+        xs: 8,
         s: 12,
-        p: 14,
-        xp: 16,
-        xxp: 18,
-        m: 24,
+        p: 16,
+        xp: 20,
+        xxp: 24,
+        m: 28,
         g: 42,
         xg: 48,
         xxg: 54,
