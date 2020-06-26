@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import Div from '../../components/Div'
+import { Div, Headline, Title } from '../../components/'
 
 function Login() {
     const { signIn } = useAuth()
@@ -17,13 +17,16 @@ function Login() {
 
     return (
         <Div
-            padding={["medium", "small"]} 
-            backgroundColor='primary'
+            width='100%'
+            height='100vh'
+            padding={["small", "small"]} 
+            backgroundColor='secondary'
             display='flex'
             justifyContent='center'
             alignItems='center'
         >
-            <h1 onClick={handleSignIn}>Teste</h1>
+            <Headline text='Login' />
+            <Title text='Domínios' />
         </Div>
     );
 };
