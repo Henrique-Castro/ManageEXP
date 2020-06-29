@@ -26,12 +26,12 @@ steps:
   displayName: Build-Library
   inputs:
     command: build
-    projects: $(library)
+    projects: 'ManageEXP/ManageEXP.Solution/ManageEXP.Domain/ManageEXP.Domain.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: Build-WebApi
   inputs:
     command: build
-    projects: $(webApi)
+    projects: 'ManageEXP/ManageEXP.Solution/ManageEXP.WebApi/ManageEXP.WebApi.csproj'
     arguments: '--configuration $(buildConfiguration)'
