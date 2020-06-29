@@ -9,11 +9,18 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ManageEXP.Domain.Interfaces.DAL;
+using ManageEXP.Domain.DAL;
+using Microsoft.AspNetCore.Identity;
+
+using System.Globalization;
 
 namespace ManageEXP.WebApi
 {
@@ -29,6 +36,13 @@ namespace ManageEXP.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<IDomainDbContext, DomainDbContext>(options =>
+                    options.UseNpgsql(Configuration.GetConnectionString("ManageExpCoreConnection")));
+
+            services.AddDbContext<DomainDbContext>(options =>
+                    options.UseNpgsql(Configuration.GetConnectionString("ManageExpCoreConnection")));
+
+
             services.AddControllers();
 
             services.AddSwaggerGen(c =>
@@ -50,6 +64,7 @@ namespace ManageEXP.WebApi
                 Configuration.GetSection("Zabbix"));
 
             services.AddScoped(typeof(IZabbixService), typeof(ZabbixService));
+            services.AddScoped(typeof(IClientService), typeof(ClientService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

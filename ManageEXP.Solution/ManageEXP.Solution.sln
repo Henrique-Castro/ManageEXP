@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageEXP.Domain", "ManageE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A97F7FC3-DAFB-41B7-BFF8-D1F6E360E6A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageEXP.Tests", "ManageEXP.Tests\ManageEXP.Tests.csproj", "{C6E7C4EF-2A39-4715-86EA-BCC53404EA95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageEXP.Tests", "ManageEXP.Tests\ManageEXP.Tests.csproj", "{C6E7C4EF-2A39-4715-86EA-BCC53404EA95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{60E4BC1E-364D-402A-8EEA-1E234F5A2D14}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
