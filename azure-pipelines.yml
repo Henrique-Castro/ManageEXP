@@ -23,15 +23,9 @@ steps:
     packageType: runtime
 
 - task: DotNetCoreCLI@2
-  displayName: Build-Library
+  displayName: Build
   inputs:
     command: build
-    projects: 'ManageEXP/ManageEXP.Solution/ManageEXP.Domain/ManageEXP.Domain.csproj'
+    projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
-  displayName: Build-WebApi
-  inputs:
-    command: build
-    projects: 'ManageEXP/ManageEXP.Solution/ManageEXP.WebApi/ManageEXP.WebApi.csproj'
-    arguments: '--configuration $(buildConfiguration)'
