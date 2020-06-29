@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
+import { Navigation } from '../../components/index';
+
 function Dashboard() {
     const { signOut } = useAuth();
 
@@ -14,9 +16,7 @@ function Dashboard() {
     };
 
     return (
-        <div className="">
-            <button onClick={handleSignOut} >Sair</button>
-        </div>
+            <div className="">Dashboard</div>
     );
 };
 

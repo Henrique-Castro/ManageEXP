@@ -16,7 +16,10 @@ const Routes: React.FC = () => {
         );
     };
 
-    return signed ? <AppRoutes /> : <AuthRoutes />;
+    return signed ?
+        <AppRoutes />
+        :
+        <AuthRoutes />;
 };
 
 export default Routes;
