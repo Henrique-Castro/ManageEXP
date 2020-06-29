@@ -28,6 +28,11 @@ export const LightTheme: DefaultTheme = {
                 textColor: colors.white,
             },
         },
+        status: {
+            outofarea: colors.outofarea,
+            publish: colors.publish,
+            verify: colors.verify,
+        },
     },
     units: {
         spacing: {
@@ -79,7 +84,7 @@ export const LightTheme: DefaultTheme = {
             xxg: fonts.size.xxg,
             gg: fonts.size.gg,
             xxgg: fonts.size.xxgg,
-          },
+        },
         robotoLightItalic: fonts.robotoLightItalic,
         robotoRegular: fonts.robotoRegular,
         robotoItalic: fonts.robotoItalic,

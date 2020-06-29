@@ -2,7 +2,12 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import { Navigation } from '../../components/index';
+import { Navigation, Status } from '../../components';
+
+import {
+    STATUS_DOMAIN,
+    DomainObjectWillBeReceivedFromAPI,
+} from "../../components/Status/Domain/interface";
 
 function Dashboard() {
     const { signOut } = useAuth();
@@ -15,8 +20,15 @@ function Dashboard() {
         signOut();
     };
 
+    let testObject: DomainObjectWillBeReceivedFromAPI = {
+        type: STATUS_DOMAIN.verify,
+    };
+
     return (
-            <div className="">Dashboard</div>
+        <>
+            Dashboard
+            <Status.Domain label={testObject} />
+        </>
     );
 };
 

@@ -12,9 +12,9 @@ export default {
     secondaryBackground: '#FDFDFE',
 
     // Secondary palette
-    success: '#0AD60A',
-    danger: '#D60E0A',
-    warning: '#D6D60A',
+    publish: "#0BEA0B",
+    outofarea: "#EA0F0B",
+    verify: "#E4DB00",
 }
 
 export interface ColorsPropsBackground {
@@ -42,6 +42,12 @@ export interface ColorsPropsButton {
     def: ButtonColorsScheme;
 }
 
+export interface ColorsPropsStatus {
+  publish: string;
+  outofarea: string;
+  verify: string;
+}
+
 export interface ColorsProps {
     background: ColorsPropsBackground;
     text: ColorsPropsText;
@@ -54,3 +60,5 @@ export type ColorsBackgroundOptions = keyof ColorsPropsBackground;
 export type ColorsTextOptions = keyof ColorsPropsText;
 
 export type ColorsButtonOptions = keyof ColorsPropsButton;
+
+export type ColorsStatusOptions = keyof ColorsPropsStatus;
