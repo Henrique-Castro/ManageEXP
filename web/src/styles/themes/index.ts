@@ -1,11 +1,11 @@
 import 'styled-components';
 import { DefaultTheme } from 'styled-components';
 
-import colors, { ColorsProps } from './colors';
+import colors from './colors';
 
-import fonts, { FontsProps } from './fonts';
+import fonts from './fonts';
 
-import units, { UnitsProps } from './units';
+import units from './units';
 
 export const LightTheme: DefaultTheme = {
     colors: {

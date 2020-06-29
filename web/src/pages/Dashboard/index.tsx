@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useAuth } from '../../contexts/auth';
 
 function Dashboard() {
-    const { signed, signOut } = useAuth();
+    const { signOut } = useAuth();
 
     useEffect(() => {
         document.title = "Dashboard | ManageEXP";

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import { Div, Headline, Title } from '../../components/'
+import { Div } from '../../components/'
 
 function Login() {
     const { signIn } = useAuth()
@@ -25,8 +25,7 @@ function Login() {
             justifyContent='center'
             alignItems='center'
         >
-            <Headline text='Login' />
-            <Title text='Domínios' />
+            <button onClick={handleSignIn}>Entrar</button>
         </Div>
     );
 };
