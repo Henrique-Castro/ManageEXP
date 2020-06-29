@@ -20,6 +20,14 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build' 
+    projects: 'ManageEXP/ManageEXP.Solution/ManageEXP.Domain/ManageEXP.Domain.csproj'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build' 
+    projects: 'ManageEXP/ManageEXP.Solution/ManageEXP.WebApi/ManageEXP.WebApi.csproj'
     
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
