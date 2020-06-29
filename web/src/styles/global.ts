@@ -55,8 +55,9 @@ export default createGlobalStyle`
     html,
     body {
         font-family: ${({ theme }) => theme.fonts.robotoBlack}, Arial, Helvetica, sans-serif;
-        background-color: ${({ theme }) => theme.colors.background.secondary};
+        background-color: ${({ theme }) => theme.colors.background.primary};
         -webkit-font-smoothing: antialiased;
+        display: inline-block;
     };
 
     ul { list-style: none };
