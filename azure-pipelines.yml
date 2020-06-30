@@ -10,9 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  solution: 'ManageEXP/ManageEXP.Solution/ManageEXP.Solution.sln'
-  library: 'ManageEXP/ManageEXP.Solution/ManageEXP.Domain/ManageEXP.Domain.csproj'
-  webApi: 'ManageEXP/ManageEXP.Solution/ManageEXP.WebApi/ManageEXP.WebApi.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
