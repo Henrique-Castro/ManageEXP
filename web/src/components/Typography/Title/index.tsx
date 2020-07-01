@@ -17,10 +17,10 @@ const Title = ({ text }: TitleProps) => {
         <Typography
             as='h2'
             text={text}
-            color='primary'
-            fontSize='m'
+            color='secondary'
+            fontSize='g'
             lineHeight={33}
-            margingBottom="xLarge"
+            margingBottom="xxSmall"
         />
     );
 };
