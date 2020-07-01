@@ -43,7 +43,7 @@ export default createGlobalStyle`
         src: url(${RobotoBlack});
     }
 
-    :root { font-size: 16px };
+    :root { font-size: 16px; };
 
     * {
         margin: 0;
@@ -57,7 +57,6 @@ export default createGlobalStyle`
         font-family: ${({ theme }) => theme.fonts.robotoBlack}, Arial, Helvetica, sans-serif;
         background-color: ${({ theme }) => theme.colors.background.primary};
         -webkit-font-smoothing: antialiased;
-        display: inline-block;
     };
 
     ul { list-style: none };

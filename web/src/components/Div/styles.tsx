@@ -126,7 +126,7 @@ export const Custom = styled(Div) <CustomGridProps>`
 
     /** Display */
 
-    display: ${({ display }) => (display ? display : 'block')};
+    display: ${({ display }) => (display ? display : 'inline-block')};
 
     /** Background */
 
