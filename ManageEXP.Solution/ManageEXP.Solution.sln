@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageEXP.Tests", "ManageEX
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{60E4BC1E-364D-402A-8EEA-1E234F5A2D14}"
 	ProjectSection(SolutionItems) = preProject
-		Dockerfile = Dockerfile
+		Database\Dockerfile = Database\Dockerfile
 	EndProjectSection
 EndProject
 Global
