@@ -2,6 +2,8 @@ import React from 'react';
 import { STATUS_DOMAIN } from '../../Status/Domain/interface';
 import { Status } from '../..';
 
+import { DomainRow } from './styles';
+
 export interface IDominio {
     dominio: string;
     dataAtualizacao: string;
@@ -14,13 +16,13 @@ export interface DominioProps {
 
 const Dominio = ({ data }: DominioProps) => {
     let linhas = data.map((item, index) => (
-        <tr key={index}>
-            <td key={index} >{item.dominio}</td>
-            <td key={index} >{item.dataAtualizacao}</td>
+        <DomainRow key={index}>
+            <td className='dominio' key={index} >{item.dominio}</td>
+            <td className='dataAtualizacao' key={index} >{item.dataAtualizacao}</td>
             <td key={index} >
                 <Status.Domain label={item.status} />
             </td>
-        </tr>
+        </DomainRow>
     ));
 
 return (

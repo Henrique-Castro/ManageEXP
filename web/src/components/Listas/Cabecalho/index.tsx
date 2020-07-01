@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { TableHeader } from './styles';
+
 interface HeaderProps {
     headerData: string[];
 };
@@ -7,11 +9,11 @@ interface HeaderProps {
 const ListaCabecalho = ({ headerData }: HeaderProps) => {
     return (
         <thead>
-            <tr>
+            <TableHeader>
                 {headerData.map((element) => (
                     <th>{element}</th>
                 ))}
-            </tr>
+            </TableHeader>
         </thead>
     );
 };

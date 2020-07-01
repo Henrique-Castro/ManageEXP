@@ -37,10 +37,10 @@ function Dominios() {
     return (
         <>
             <Title text="Domínios" />
-            <table>
+            <Listas.Table>
                 <Listas.Cabecalho headerData={header} />
                 <Listas.Dominio data={data} />
-            </table>
+            </Listas.Table>
         </>
     );
 };
