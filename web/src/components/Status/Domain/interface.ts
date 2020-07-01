@@ -1,7 +1,7 @@
 import { ColorsStatusOptions } from "../../../styles/themes/colors";
 
 export interface Props {
-  label: DomainObjectWillBeReceivedFromAPI;
+  label: STATUS_DOMAIN;
 }
 
 export enum STATUS_DOMAIN {

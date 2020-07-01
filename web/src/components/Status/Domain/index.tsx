@@ -18,11 +18,11 @@ const Domain = ({ label }: Props) => {
     return colorScheme[type];
   };
 
-  const variant = statusColorVariant(label.type);
+  const variant = statusColorVariant(label);
   
   return (
     <Container variant={variant}>
-      <Text variant={variant}>{label.type}</Text>
+      <Text variant={variant}>{label}</Text>
     </Container>
   );
 };
