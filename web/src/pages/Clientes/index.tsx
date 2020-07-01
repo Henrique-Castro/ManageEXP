@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 
+import { Title } from '../../components';
+
 function Clientes() {
     useEffect(() => {
         document.title = "Clientes | ManageEXP";
     }, []);
 
-    return <h1>Clientes</h1>;
+    return(
+        <Title text='Clientes' />
+    );
 };
 
 export default Clientes;

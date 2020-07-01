@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import { Navigation, Status } from '../../components';
+import { Status, Title } from '../../components';
 
 import {
     STATUS_DOMAIN,
@@ -20,14 +20,9 @@ function Dashboard() {
         signOut();
     };
 
-    let testObject: DomainObjectWillBeReceivedFromAPI = {
-        type: STATUS_DOMAIN.verify,
-    };
-
     return (
         <>
-            Dashboard
-            <Status.Domain label={testObject} />
+            <Title text='Dashboard' />
         </>
     );
 };
