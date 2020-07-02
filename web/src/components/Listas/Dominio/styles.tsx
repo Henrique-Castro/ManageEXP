@@ -12,12 +12,12 @@ export const DomainRow = styled.tr`
 
   .dominio, .dataAtualizacao {
     color: ${({ theme }) => theme.colors.text.quaternary};
-    font-size: ${({ theme }) => theme.fonts.size.xp};
+    font-size: ${({ theme }) => theme.fonts.size.xp}px;
   };
 
   .dominio {
       padding-left: 20px;
-  }
+  };
 
   &:hover {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);

@@ -13,5 +13,5 @@ export const TableHeader = styled.tr`
 
     th:first-child{
         padding-left: 20px;
-    }
+    };
 `;
