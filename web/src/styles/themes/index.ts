@@ -13,6 +13,7 @@ export const LightTheme: DefaultTheme = {
             primary: colors.primary,
             secondary: colors.primaryBackground,
             tertiary: colors.secondaryBackground,
+            quaternary: colors.senary,
         },
         text: {
             primary: colors.primary,
@@ -20,11 +21,16 @@ export const LightTheme: DefaultTheme = {
             tertiary: colors.tertiary,
             quaternary: colors.quaternary,
             quinary: colors.quinary,
+            senary: colors.septenary,
             white: colors.white,
         },
         button: {
             def: {
                 backgroundColor: colors.primary,
+                textColor: colors.white,
+            },
+            logout: {
+                backgroundColor: colors.outofarea,
                 textColor: colors.white,
             },
         },
