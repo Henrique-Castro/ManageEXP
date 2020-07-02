@@ -4,6 +4,9 @@ import { HeaderSection } from './styles';
 
 import { Typography } from '..';
 
+import Notification from '../../assets/svgs/Notification.svg';
+import Profile from '../../assets/svgs/Profile.svg';
+
 const Header: React.FC = () => {
 
     const [date, setDate] = useState(new Date());
@@ -38,6 +41,8 @@ const Header: React.FC = () => {
                 fontFamily="robotoLightItalic"
                 color='quaternary'
             />
+            <img src={Notification} alt="Notificações"/>
+            <img src={Profile} alt="Perfil"/>
         </HeaderSection>
     );
 };
