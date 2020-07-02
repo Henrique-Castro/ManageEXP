@@ -63,4 +63,21 @@ export default createGlobalStyle`
 
     a { text-decoration: none };
 
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+    };
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.colors.background.tertiary}; 
+    };
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.colors.background.primary}; 
+        border-radius: 4px;
+        transition: all 2s;
+    };
+
 `;
