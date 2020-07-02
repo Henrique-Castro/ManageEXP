@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import { Status, Title } from '../../components';
+import { Status, Title, Button } from '../../components';
 
 import {
     STATUS_DOMAIN,
@@ -23,7 +23,7 @@ function Dashboard() {
     return (
         <>
             <Title text='Dashboard' />
-            <button onClick={handleSignOut}>Clique em mim</button>
+            <Button.Default text='Logout' variant='logout' onClick={handleSignOut} />
         </>
     );
 };
