@@ -23,6 +23,7 @@ function Dashboard() {
     return (
         <>
             <Title text='Dashboard' />
+            <button onClick={handleSignOut}>Clique em mim</button>
         </>
     );
 };
