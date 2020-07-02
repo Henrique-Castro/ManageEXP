@@ -107,16 +107,16 @@ export const Custom = styled(Div) <CustomGridProps>`
     position: ${({ position }) => position || 'relative'};
 
     ${({ position, top }) =>
-        position === 'absolute' && top && { top }};
+        position === 'absolute' && top && top === 0 ? { 'top': 0 } : { 'top': top }};
 
     ${({ position, right }) =>
-        position === 'absolute' && right && { right }};
+        position === 'absolute' && right && right === 0 ? { 'right': 0 } : { 'right': right }};
 
     ${({ position, bottom }) =>
-        position === 'absolute' && bottom && { bottom }};
+        position === 'absolute' && bottom && bottom === 0 ? { 'bottom': 0 } : { 'bottom': bottom }};
 
     ${({ position, left }) =>
-        position === 'absolute' && left && { left }};
+        position === 'absolute' && left && left === 0 ? { 'left': 0 } :  { 'left': left }};
 
     /** Others */
 
