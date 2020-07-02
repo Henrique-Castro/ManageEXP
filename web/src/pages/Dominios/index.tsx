@@ -27,6 +27,46 @@ const data: IDominio[] = [
         dataAtualizacao: "18/03/2020",
         status: STATUS_DOMAIN["publish"],
     },
+    {
+        dominio: "www.google.com",
+        dataAtualizacao: "18/03/2020",
+        status: STATUS_DOMAIN["publish"],
+    },
+    {
+        dominio: "matheuspsantos.dev",
+        dataAtualizacao: "29/06/2020",
+        status: STATUS_DOMAIN["verify"],
+    },
+    {
+        dominio: "www.blocktime.com.br",
+        dataAtualizacao: "29/06/2020",
+        status: STATUS_DOMAIN["outofarea"],
+    },
+    {
+        dominio: "www.uol.com.br",
+        dataAtualizacao: "18/03/2020",
+        status: STATUS_DOMAIN["publish"],
+    },
+    {
+        dominio: "www.google.com",
+        dataAtualizacao: "18/03/2020",
+        status: STATUS_DOMAIN["publish"],
+    },
+    {
+        dominio: "matheuspsantos.dev",
+        dataAtualizacao: "29/06/2020",
+        status: STATUS_DOMAIN["verify"],
+    },
+    {
+        dominio: "www.blocktime.com.br",
+        dataAtualizacao: "29/06/2020",
+        status: STATUS_DOMAIN["outofarea"],
+    },
+    {
+        dominio: "www.uol.com.br",
+        dataAtualizacao: "18/03/2020",
+        status: STATUS_DOMAIN["publish"],
+    },
 ];
 
 function Dominios() {
