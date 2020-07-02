@@ -16,7 +16,7 @@ const DefaultButton = (props: Props) => {
 
     return (
         <DefaultBtn 
-            // variant={variant} 
+            variant={variant} 
             onClick={callOnClick}
         >
             {text}
