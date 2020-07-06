@@ -2,12 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import { Status, Title, Button } from '../../components';
-
-import {
-    STATUS_DOMAIN,
-    DomainObjectWillBeReceivedFromAPI,
-} from "../../components/Status/Domain/interface";
+import { Title, Button } from '../../components';
 
 function Dashboard() {
     const { signOut } = useAuth();

@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import logo from '../../assets/images/WhiteLogo.png';
 
 import Dashboard from '../../assets/images/icons/Dashboard.png';
-import DashboardActive from '../../assets/images/icons/DashboardActive.png';
+// import DashboardActive from '../../assets/images/icons/DashboardActive.png';
 import Dominios from '../../assets/images/icons/Dominios.png';
-import DominiosActive from '../../assets/images/icons/DominiosActive.png';
+// import DominiosActive from '../../assets/images/icons/DominiosActive.png';
 import Certificados from '../../assets/images/icons/Certificados.png';
-import CertificadosActive from '../../assets/images/icons/CertificadosActive.png';
+// import CertificadosActive from '../../assets/images/icons/CertificadosActive.png';
 import Clientes from '../../assets/images/icons/Clientes.png';
-import ClientesActive from '../../assets/images/icons/ClientesActive.png';
+// import ClientesActive from '../../assets/images/icons/ClientesActive.png';
 
 import { Nav } from './styles';
 
