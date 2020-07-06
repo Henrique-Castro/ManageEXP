@@ -62,7 +62,6 @@ function Login() {
                 backgroundColor='quaternary'
                 overflow='hidden'
             >
-
                 <Div
                     position='absolute'
                     top={0}
@@ -89,9 +88,8 @@ function Login() {
                         align='left'
                     />
                 </Div>
-                <img style={{ width: 380 }} src={Onboarding} alt="Onboarding" />
+                <img style={{ width: '55%', minWidth: 360, maxWidth: 600 }} src={Onboarding} alt="Onboarding" />
             </Div>
-
         </Div>
     );
 };
