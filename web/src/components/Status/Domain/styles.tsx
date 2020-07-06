@@ -4,13 +4,13 @@ import { StyledProps } from "./interface";
 import { ColorsStatusOptions } from "../../../styles/themes/colors";
 
 const transformToRgba = (variant: ColorsStatusOptions) => {
-  if (variant === "publish") {
+  if (variant === "success") {
     return "rgba(11,234,11, 0.2)";
   };
-  if (variant === "verify") {
+  if (variant === "warn") {
     return "rgba(228, 220, 0, 0.2)";
   };
-  if (variant === "outofarea") {
+  if (variant === "error") {
     return "rgba(234, 15, 11, 0.2)";
   };
 };

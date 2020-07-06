@@ -5,9 +5,9 @@ export interface Props {
 }
 
 export enum STATUS_DOMAIN {
-  outofarea = "Fora de Área",
-  verify = "Verificando",
-  publish = "Publicado",
+  error = "Fora de Área",
+  warn = "Verificando",
+  success = "Publicado",
 }
 
 export interface StyledProps {

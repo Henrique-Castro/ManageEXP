@@ -30,14 +30,14 @@ export const LightTheme: DefaultTheme = {
                 textColor: colors.white,
             },
             logout: {
-                backgroundColor: colors.outofarea,
+                backgroundColor: colors.error,
                 textColor: colors.white,
             },
         },
         status: {
-            outofarea: colors.outofarea,
-            publish: colors.publish,
-            verify: colors.verify,
+            error: colors.error,
+            success: colors.success,
+            warn: colors.warn,
         },
     },
     units: {

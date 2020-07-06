@@ -14,9 +14,9 @@ export default {
     secondaryBackground: '#FDFDFE',
 
     // Secondary palette
-    publish: "#0BEA0B",
-    outofarea: "#EA0F0B",
-    verify: "#E4DB00",
+    success: "#0BEA0B",
+    error: "#EA0F0B",
+    warn: "#E4DB00",
 };
 
 export interface ColorsPropsBackground {
@@ -48,9 +48,9 @@ export interface ColorsPropsButton {
 };
 
 export interface ColorsPropsStatus {
-  publish: string;
-  outofarea: string;
-  verify: string;
+    success: string;
+    error: string;
+    warn: string;
 };
 
 export interface ColorsProps {

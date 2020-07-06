@@ -10,62 +10,62 @@ const data: IDominio[] = [
     {
         dominio: "www.google.com",
         dataAtualizacao: "18/03/2020",
-        status: STATUS_DOMAIN["publish"],
+        status: STATUS_DOMAIN["success"],
     },
     {
         dominio: "matheuspsantos.dev",
         dataAtualizacao: "29/06/2020",
-        status: STATUS_DOMAIN["verify"],
+        status: STATUS_DOMAIN["warn"],
     },
     {
         dominio: "www.blocktime.com.br",
         dataAtualizacao: "29/06/2020",
-        status: STATUS_DOMAIN["outofarea"],
+        status: STATUS_DOMAIN["error"],
     },
     {
         dominio: "www.uol.com.br",
         dataAtualizacao: "18/03/2020",
-        status: STATUS_DOMAIN["publish"],
+        status: STATUS_DOMAIN["success"],
     },
     {
         dominio: "www.google.com",
         dataAtualizacao: "18/03/2020",
-        status: STATUS_DOMAIN["publish"],
+        status: STATUS_DOMAIN["success"],
     },
     {
         dominio: "matheuspsantos.dev",
         dataAtualizacao: "29/06/2020",
-        status: STATUS_DOMAIN["verify"],
+        status: STATUS_DOMAIN["warn"],
     },
     {
         dominio: "www.blocktime.com.br",
         dataAtualizacao: "29/06/2020",
-        status: STATUS_DOMAIN["outofarea"],
+        status: STATUS_DOMAIN["error"],
     },
     {
         dominio: "www.uol.com.br",
         dataAtualizacao: "18/03/2020",
-        status: STATUS_DOMAIN["publish"],
+        status: STATUS_DOMAIN["success"],
     },
     {
         dominio: "www.google.com",
         dataAtualizacao: "18/03/2020",
-        status: STATUS_DOMAIN["publish"],
+        status: STATUS_DOMAIN["success"],
     },
     {
         dominio: "matheuspsantos.dev",
         dataAtualizacao: "29/06/2020",
-        status: STATUS_DOMAIN["verify"],
+        status: STATUS_DOMAIN["warn"],
     },
     {
         dominio: "www.blocktime.com.br",
         dataAtualizacao: "29/06/2020",
-        status: STATUS_DOMAIN["outofarea"],
+        status: STATUS_DOMAIN["error"],
     },
     {
         dominio: "www.uol.com.br",
         dataAtualizacao: "18/03/2020",
-        status: STATUS_DOMAIN["publish"],
+        status: STATUS_DOMAIN["success"],
     },
 ];
 

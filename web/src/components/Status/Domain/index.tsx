@@ -10,16 +10,16 @@ const Domain = ({ label }: Props) => {
     const colorScheme: {
       [key: string]: ColorsStatusOptions;
     } = {
-      [STATUS_DOMAIN.verify]: "verify",
-      [STATUS_DOMAIN.outofarea]: "outofarea",
-      [STATUS_DOMAIN.publish]: "publish",
+      [STATUS_DOMAIN.warn]: "warn",
+      [STATUS_DOMAIN.error]: "error",
+      [STATUS_DOMAIN.success]: "success",
     };
 
     return colorScheme[type];
   };
 
   const variant = statusColorVariant(label);
-  
+
   return (
     <Container variant={variant}>
       <Text variant={variant}>{label}</Text>
