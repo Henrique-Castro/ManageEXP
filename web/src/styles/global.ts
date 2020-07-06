@@ -70,14 +70,13 @@ export default createGlobalStyle`
 
     /* Track */
     ::-webkit-scrollbar-track {
-        background: ${({ theme }) => theme.colors.background.tertiary}; 
+        background: ${({ theme }) => theme.colors.background.secondary}; 
     };
     
     /* Handle */
     ::-webkit-scrollbar-thumb {
         background: ${({ theme }) => theme.colors.background.primary}; 
         border-radius: 4px;
-        transition: all 2s;
     };
 
 `;
