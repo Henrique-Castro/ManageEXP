@@ -80,6 +80,7 @@ function Dominios() {
             <Listas.Table>
                 <Listas.Cabecalho headerData={header} />
                 <Listas.Dominio data={data} />
+                <Listas.Footer/>
             </Listas.Table>
         </>
     );
