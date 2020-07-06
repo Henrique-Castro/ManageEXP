@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import { Title, Button } from '../../components';
+import { Title, Button, Status } from '../../components';
 
 function Dashboard() {
     const { signOut } = useAuth();
@@ -19,6 +19,7 @@ function Dashboard() {
         <>
             <Title text='Dashboard' />
             <Button.Default text='Logout' variant='logout' onClick={handleSignOut} />
+            <Status.Certificado variant='success' value='3m' />
         </>
     );
 };

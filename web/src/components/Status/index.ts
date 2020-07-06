@@ -1,3 +1,4 @@
 import Domain from "./Domain";
+import Certificado from './Certificado';
 
-export default { Domain };
+export default { Domain, Certificado };
