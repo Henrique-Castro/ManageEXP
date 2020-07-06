@@ -6,9 +6,9 @@ export const DomainRow = styled.tr`
   transition: all .5s;
 
   td {
-      padding-bottom: 12px;
-      padding-top: 12px;
-  }
+    padding-bottom: 16px;
+    padding-top: 16px;
+  };
 
   .dominio, .dataAtualizacao {
     color: ${({ theme }) => theme.colors.text.quaternary};
