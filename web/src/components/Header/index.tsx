@@ -8,8 +8,8 @@ import Notification from '../../assets/svgs/Notification.svg';
 import Profile from '../../assets/svgs/Profile.svg';
 
 const Header: React.FC = () => {
-
-    const [date, setDate] = useState(new Date());
+    
+    const date = new Date();
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
