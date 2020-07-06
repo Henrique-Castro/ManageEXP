@@ -24,9 +24,9 @@ const Dominio = ({ data }: DominioProps) => {
 
     let linhas = data.map((item, index) => (
         <DomainRow key={index}>
-            <td className='dominio' key={index} >{item.dominio}</td>
-            <td className='dataAtualizacao' key={index} >{item.dataAtualizacao}</td>
-            <td key={index} >
+            <td className='dominio'>{item.dominio}</td>
+            <td className='dataAtualizacao'>{item.dataAtualizacao}</td>
+            <td>
                 <Status.Domain label={item.status} />
             </td>
         </DomainRow>

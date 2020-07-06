@@ -10,8 +10,8 @@ const ListaCabecalho = ({ headerData }: HeaderProps) => {
     return (
         <thead>
             <TableHeader>
-                {headerData.map((element) => (
-                    <th>{element}</th>
+                {headerData.map((element, index) => (
+                    <th key={index}>{element}</th>
                 ))}
             </TableHeader>
         </thead>
