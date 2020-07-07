@@ -19,7 +19,6 @@ function Dashboard() {
         <>
             <Title text='Dashboard' />
             <Button.Default text='Logout' variant='logout' onClick={handleSignOut} />
-            <Status.Certificado variant='success' value='3m' />
         </>
     );
 };
