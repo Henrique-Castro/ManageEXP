@@ -9,6 +9,7 @@ export const TableHeader = styled.tr`
         text-align: left;
         padding-top: 20px;
         padding-bottom: 12px;
+        width:40%;
     };
 
     th:first-child{
