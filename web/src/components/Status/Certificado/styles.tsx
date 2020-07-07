@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { ColorsStatusOptions } from '../../../styles/themes/colors';
 
 interface Props {
-    variant: ColorsStatusOptions;
-    value: string;
-}
+    data?: string;
+    variant?: ColorsStatusOptions;
+};
 
 export const Container = styled.span<Props>`
     font-size: ${({ theme }) => theme.fonts.size.xxp};
