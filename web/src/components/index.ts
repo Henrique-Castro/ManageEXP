@@ -13,3 +13,5 @@ export { default as Header } from './Header';
 export { default as Status } from './Status';
 
 export { default as Listas } from './Listas';
+
+export { default as Form } from './Form';
