@@ -15,9 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A97F7FC3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageEXP.Tests", "ManageEXP.Tests\ManageEXP.Tests.csproj", "{C6E7C4EF-2A39-4715-86EA-BCC53404EA95}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{60E4BC1E-364D-402A-8EEA-1E234F5A2D14}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{A5F37CCE-8D3D-44F5-85D9-73E459339014}"
 	ProjectSection(SolutionItems) = preProject
-		Database\Dockerfile = Database\Dockerfile
+		docker-compose.debug.yml = docker-compose.debug.yml
+		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
 Global
