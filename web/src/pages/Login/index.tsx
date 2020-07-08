@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import { Div, Button, Typography } from '../../components/';
+import { Div, Button, Typography, Form } from '../../components/';
 
 import Onboarding from '../../assets/images/OnboardingImage.png';
 import OnboardingBackground from '../../assets/images/OnboardingBackground.png';
@@ -48,7 +48,10 @@ function Login() {
                     src={Logo}
                     alt="ManageEXP Logo"
                 />
-                <Button.Default text='Entre!' onClick={handleSignIn} />
+                <form action="">
+                    <Form.Input type='text'/>
+                    <Button.Default text='Entre!' onClick={handleSignIn} />
+                </form>
             </Div>
 
             <Div
