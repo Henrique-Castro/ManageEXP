@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { parseDays } from '../../../utils/daysFormat';
+
 import { Container } from './styles';
 
 interface Props {
@@ -7,28 +9,13 @@ interface Props {
 }
 
 const Certificado = ({ data }: Props) => {
-
     const [value, setValue] = useState(data);
 
     useEffect(() => {
-        parseData();
+        const resultado = parseDays(data);
+
+        setValue(resultado);
     }, []);
-
-    const parseData = () => {
-        const parsedValue = value?.split('.');
-
-        if (parsedValue) {
-
-            const days = parseInt(parsedValue[0]);
-
-            let leftMonth = Math.floor(days / 30);
-            let leftDays = days % 30;
-
-            const concatValue = `${leftMonth > 0 ? `${leftMonth} ${leftMonth === 1 ? 'mês' : 'meses' }` : ''} ${leftMonth && leftDays ? 'e' : ''} ${leftDays > 0 ? `${leftDays} ${leftDays === 1 ? 'dia' : 'dias'}` : ''} `;
-
-            setValue(concatValue);
-        }
-    };
 
     return (
         <Container variant='error' data={data}>
