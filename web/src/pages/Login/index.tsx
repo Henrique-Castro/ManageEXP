@@ -48,10 +48,7 @@ function Login() {
                     src={Logo}
                     alt="ManageEXP Logo"
                 />
-                <form action="">
-                    <Form.Input type='text'/>
                     <Button.Default text='Entre!' onClick={handleSignIn} />
-                </form>
             </Div>
 
             <Div
