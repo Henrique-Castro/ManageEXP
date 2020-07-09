@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAuth } from '../../contexts/auth';
 
-import { Title, Button, Status } from '../../components';
+import { Title, Button } from '../../components';
 
 function Dashboard() {
     const { signOut } = useAuth();
