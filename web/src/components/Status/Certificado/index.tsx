@@ -13,7 +13,7 @@ const Certificado = ({ data }: STATUS_CERTIFICATE) => {
         const resultado = parseDays(data);
 
         setValue(resultado);
-    }, []);
+    }, [data]);
 
     return (
         <Container variant='error' data={data}>
