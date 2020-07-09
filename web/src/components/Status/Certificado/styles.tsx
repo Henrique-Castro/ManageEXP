@@ -1,13 +1,25 @@
 import styled from 'styled-components';
 
-import { ColorsStatusOptions } from '../../../styles/themes/colors';
+import { StyledProps } from './interface';
 
-interface Props {
-    data?: string;
-    variant?: ColorsStatusOptions;
+import { handleDays } from '../../../utils/daysFormat';
+
+const severityVariant = (
+    value?: string
+): string => { 
+    const days = handleDays(value);
+
+    if (days && days > 0) {
+        if (days <= 15) return 'error';
+        if (days > 15 && days <= 45  ) return 'warn';
+        return 'success';
+    };
+
+    return 'Incorrect value';
 };
 
-export const Container = styled.span<Props>`
+export const Container = styled.span<StyledProps>`
     font-size: ${({ theme }) => theme.fonts.size.xxp};
-    color: ${({ variant, theme }) => theme.colors.status[variant]};
+
+    color: ${({ theme, variant, data }) => theme.colors.status[severityVariant(data)] }
 `;

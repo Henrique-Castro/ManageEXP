@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
+import { STATUS_CERTIFICATE } from './interface';
+
 import { parseDays } from '../../../utils/daysFormat';
 
 import { Container } from './styles';
 
-interface Props {
-    data?: string
-}
-
-const Certificado = ({ data }: Props) => {
+const Certificado = ({ data }: STATUS_CERTIFICATE) => {
     const [value, setValue] = useState(data);
 
     useEffect(() => {
