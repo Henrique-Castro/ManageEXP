@@ -1,23 +1,15 @@
 import React, { useEffect } from 'react';
 
-import { useAuth } from '../../contexts/auth';
-
-import { Div, Button, Typography, Form } from '../../components/';
+import { Div, Typography, Form } from '../../components/';
 
 import Onboarding from '../../assets/images/OnboardingImage.png';
 import OnboardingBackground from '../../assets/images/OnboardingBackground.png';
 import Logo from '../../assets/images/BlueLogo.png';
 
 function Login() {
-    const { signIn } = useAuth()
-
     useEffect(() => {
         document.title = "Login | ManageEXP";
     }, []);
-
-    function handleSignIn() {
-        signIn();
-    };
 
     return (
         <Div
@@ -48,7 +40,7 @@ function Login() {
                     src={Logo}
                     alt="ManageEXP Logo"
                 />
-                    <Button.Default text='Entre!' onClick={handleSignIn} />
+                    <Form />
             </Div>
 
             <Div
