@@ -13,7 +13,7 @@ const ListaCabecalho = ({ headerData }: HeaderProps) => {
         const rows = headerData.length;
 
         setRowsCount(rows)
-    },[])
+    },[headerData])
 
     return (
         <thead>

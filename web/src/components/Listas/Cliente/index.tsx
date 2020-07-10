@@ -24,16 +24,16 @@ export interface ClienteProps {
 
 const Cliente = ({ data }: ClienteProps) => {
   let linhas = data.map((item) => (
-    <ClientRow>
+    <ClientRow key={item.id}>
       <td className="company">{item.company}</td>
       <td>
         <CompanyManager>
-          <strong>Renan</strong>
-          <span>emalil@teste.com</span>
+          <strong>{item.technicalManager}</strong>
+          <span>{item.email}</span>
         </CompanyManager>
       </td>
       <td>
-        <DomainLink>teste.com.br</DomainLink>
+        <DomainLink>{item.domainId}</DomainLink>
       </td>
       <td>
         <ContactIcons>

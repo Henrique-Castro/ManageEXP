@@ -1,13 +1,12 @@
 import React from "react";
 
-import { useAuth } from '../../contexts/auth'
+import { useAuth } from "../../contexts/auth";
 
 import { Container } from "./styles";
 
 import { Headline, Button } from "..";
 
 const Form: React.FC = () => {
-
   const { signIn } = useAuth();
 
   return (
@@ -19,19 +18,17 @@ const Form: React.FC = () => {
       <form action="">
         <div className="inputContainer">
           <label>URL do Zabbix</label>
-          <input type="text" placeholder='Escreva a URL do Zabbix' />
+          <input type="text" placeholder="Escreva a URL do Zabbix" />
         </div>
 
         <div className="inputContainer">
           <label>Email</label>
-          <input type="email" placeholder='Escreva seu email' />
+          <input type="email" placeholder="Escreva seu email" />
         </div>
 
         <div className="inputContainer">
           <label>Senha</label>
-          <div className="iconInput">
-            <input type="password" placeholder='Escreva sua senha' />
-          </div>
+          <input type="password" placeholder="Escreva sua senha" />
         </div>
       </form>
       <Button.Default text="Entre!" onClick={() => signIn()} />
