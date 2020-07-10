@@ -53,10 +53,18 @@ export interface ColorsPropsStatus {
     warn: string;
 };
 
+export interface ColorsPropsIcons {
+    primary: string;
+    secondary: string;
+    tertiary: string;
+};
+
 export interface ColorsProps {
     background: ColorsPropsBackground;
     text: ColorsPropsText;
     button: ColorsPropsButton;
+    status: ColorsPropsStatus;
+    icons: ColorsPropsIcons;
 };
 
 // General export for components
@@ -67,3 +75,5 @@ export type ColorsTextOptions = keyof ColorsPropsText;
 export type ColorsButtonOptions = keyof ColorsPropsButton;
 
 export type ColorsStatusOptions = keyof ColorsPropsStatus;
+
+export type ColorsIconsOptions = keyof ColorsPropsIcons;
