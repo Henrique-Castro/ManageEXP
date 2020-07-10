@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { useAuth } from '../../contexts/auth'
 
-import { Container, EyeIcon } from "./styles";
+import { Container } from "./styles";
 
 import { Headline, Button } from "..";
 
 const Form: React.FC = () => {
-  // const [active, setActive] = useState<boolean>(false)
 
   const { signIn } = useAuth();
 
@@ -32,7 +31,6 @@ const Form: React.FC = () => {
           <label>Senha</label>
           <div className="iconInput">
             <input type="password" placeholder='Escreva sua senha' />
-            <EyeIcon/>
           </div>
         </div>
       </form>
