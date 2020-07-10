@@ -1,0 +1,36 @@
+{
+  "config": {
+    "title": "Web",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "entries": [
+    {
+      "key": "src/docz/index.mdx",
+      "value": {
+        "name": "Hello world",
+        "route": "/",
+        "id": "93b9d61e55743f142980c1aa9b37d4d4",
+        "filepath": "src/docz/index.mdx",
+        "fullpath": "C:\\_git\\projects\\ManageEXP\\web\\src\\docz\\index.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-docz-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "hello-world",
+            "depth": 1,
+            "value": "Hello world"
+          }
+        ]
+      }
+    }
+  ],
+  "props": []
+}
