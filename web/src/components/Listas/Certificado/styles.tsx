@@ -10,6 +10,10 @@ export const CertificateRow = styled.tr`
         padding-top: 16px;
     };
 
+    td + td {
+        text-align: center;
+    };
+
     .certificado, .dataAtualizacao {
         color: ${({ theme }) => theme.colors.text.quaternary};
         font-size: ${({ theme }) => theme.fonts.size.xp}px;

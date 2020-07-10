@@ -16,12 +16,6 @@ export interface DominioProps {
 
 const Dominio = ({ data }: DominioProps) => {
 
-    // let formatterTime = new Intl.DateTimeFormat('pt-BR', {
-    //     weekday: 'long', 
-    //     month: 'numeric',
-    //     year: 'numeric',
-    // });
-
     let linhas = data.map((item, index) => (
         <DomainRow key={index}>
             <td className='dominio'>{item.dominio}</td>

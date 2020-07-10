@@ -5,9 +5,18 @@ export const DomainRow = styled.tr`
   cursor: pointer;
   transition: all .5s;
 
-  td {
+  > td {
     padding-bottom: 16px;
     padding-top: 16px;
+  };
+
+  > td + td {
+    text-align: center;
+  };
+
+  > td:last-child{
+    display: flex;
+    justify-content: center;
   };
 
   .dominio, .dataAtualizacao {
