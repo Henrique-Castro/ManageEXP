@@ -39,6 +39,11 @@ export const LightTheme: DefaultTheme = {
             success: colors.success,
             warn: colors.warn,
         },
+        icons: {
+            primary: colors.quaternary,
+            secondary: colors.white,
+            tertiary: colors.tertiary,
+        },
     },
     units: {
         spacing: {
