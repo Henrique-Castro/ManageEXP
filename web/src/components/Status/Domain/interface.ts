@@ -5,7 +5,7 @@ export interface Props {
 }
 
 export enum STATUS_DOMAIN {
-  error = "Fora de Área",
+  error = "Fora do Ar",
   warn = "Verificando",
   success = "Publicado",
 }
