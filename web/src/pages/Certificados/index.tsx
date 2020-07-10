@@ -1,56 +1,57 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { Title, Listas } from '../../components';
-import { ICertificado } from '../../components/Listas/Certificado';
+import { Title, Listas } from "../../components";
+import { ICertificado } from "../../components/Listas/Certificado";
+
+import { handleCertificates } from '../../utils/handleData';
 
 const header = ["Cliente", "Última Atualização", "Dias Restantes"];
 
 const data: ICertificado[] = [
-    {
-        cliente: "Ifnity.Inc",
-        dataAtualizacao: "18/03/2020",
-        diasRestantes: "70.000"
-    },
-    {
-        cliente: "Ifnity.Inc",
-        dataAtualizacao: "18/03/2020",
-        diasRestantes: "12.000"
-    },
-    {
-        cliente: "Ifnity.Inc",
-        dataAtualizacao: "18/03/2020",
-        diasRestantes: "30.000"
-    },
-    {
-        cliente: "Ifnity.Inc",
-        dataAtualizacao: "18/03/2020",
-        diasRestantes: "43.000"
-    },
+  {
+    cliente: "Ifnity.Inc",
+    dataAtualizacao: "18/03/2020",
+    diasRestantes: "70.000",
+  },
+  {
+    cliente: "Ifnity.Inc",
+    dataAtualizacao: "18/03/2020",
+    diasRestantes: "12.000",
+  },
+  {
+    cliente: "Ifnity.Inc",
+    dataAtualizacao: "18/03/2020",
+    diasRestantes: "30.000",
+  },
+  {
+    cliente: "Ifnity.Inc",
+    dataAtualizacao: "18/03/2020",
+    diasRestantes: "43.000",
+  },
 ];
 
 function Certificados() {
+    const [sortedData, setSortedData] = useState<ICertificado[]>([])
 
-    let dataTeste = '07/07/2020';
 
-    let date = new Date(dataTeste);
+  useEffect(() => {
+    document.title = "Certificados | ManageEXP";
 
-    console.log(date.getMonth());
+    const handleData = data.sort(handleCertificates);
 
-    useEffect(() => {
-        document.title = "Certificados | ManageEXP";
-    }, []);
+    setSortedData(handleData);
+  }, []);
 
-    return (
-        <>
-            <Title text='Certificados' />
-            <Listas.Table>
-                <Listas.Cabecalho headerData={header} />
-                <Listas.Certificado data={data} />
-                <Listas.Footer />
-            </Listas.Table>
-
-        </>
-    );
-};
+  return (
+    <>
+      <Title text="Certificados" />
+      <Listas.Table>
+        <Listas.Cabecalho headerData={header} />
+        <Listas.Certificado data={sortedData} />
+        <Listas.Footer />
+      </Listas.Table>
+    </>
+  );
+}
 
 export default Certificados;
