@@ -1,18 +1,23 @@
 import styled from 'styled-components';
 
-export const TableHeader = styled.tr`
+interface Props {
+    rows: number;
+};
+
+export const TableHeader = styled.tr<Props>`
     width: 100%;
 
-    th {
+    > th {
         color: ${({theme}) => theme.colors.text.quinary};
         font-size: ${({theme}) => theme.fonts.size.xp};
-        text-align: left;
+        text-align: center;
         padding-top: 20px;
         padding-bottom: 12px;
-        width:40%;
+        width: ${({ rows }) => `${100 / rows}%`};
     };
 
-    th:first-child{
+    > th:first-child{
+        text-align: left;
         padding-left: 20px;
     };
 `;
