@@ -24,6 +24,13 @@ const config = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
+    {
       resolve: 'gatsby-theme-docz',
       options: {
         themeConfig: {},
@@ -32,11 +39,30 @@ const config = {
         themesDir: 'src',
         mdxExtensions: ['.md', '.mdx'],
         docgenConfig: {},
-        menu: [],
+        menu: [
+          'Introdução',
+          'Inicialização do projeto',
+          'Tecnologias usadas',
+          {
+            name: 'Componentes',
+            menu: [
+              'Div',
+              'Typography',
+              'Button',
+              'Header',
+              'Nav',
+              'Listas',
+              'Status',
+              'Form',
+            ],
+          },
+          'Utils',
+          'Agradecimentos',
+        ],
         mdPlugins: [],
         hastPlugins: [],
         ignore: [],
-        typescript: false,
+        typescript: true,
         ts: false,
         propsParser: true,
         'props-parser': true,
