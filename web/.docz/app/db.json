@@ -82,6 +82,27 @@
       }
     },
     {
+      "key": "src/docz/components.mdx",
+      "value": {
+        "name": "Componentes",
+        "route": "/components",
+        "id": "c4114e9c00dacb1f29b8c145fc41dac8",
+        "filepath": "src/docz/components.mdx",
+        "fullpath": "C:\\_git\\projects\\ManageEXP\\web\\src\\docz\\components.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-docz-components",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "componentes",
+            "depth": 1,
+            "value": "Componentes"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/docz/index.mdx",
       "value": {
         "name": "Introdução",
@@ -126,9 +147,66 @@
         "menu": "",
         "headings": [
           {
-            "slug": "️-tecnologias-usadas-no-nosso-projeto",
+            "slug": "️-tecnologias-usadas",
             "depth": 1,
-            "value": "👨‍💻️ Tecnologias Usadas no nosso projeto"
+            "value": "👨‍💻️ Tecnologias usadas"
+          },
+          {
+            "slug": "banco-de-dados",
+            "depth": 2,
+            "value": "Banco de dados"
+          },
+          {
+            "slug": "backend",
+            "depth": 2,
+            "value": "Backend"
+          },
+          {
+            "slug": "frontend",
+            "depth": 2,
+            "value": "Frontend"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docz/thanks.mdx",
+      "value": {
+        "name": "Agradecimentos",
+        "route": "/thanks",
+        "id": "07b840cff60610ca5c3ad691b6382f57",
+        "filepath": "src/docz/thanks.mdx",
+        "fullpath": "C:\\_git\\projects\\ManageEXP\\web\\src\\docz\\thanks.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-docz-thanks",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "agradecimentos",
+            "depth": 1,
+            "value": "Agradecimentos"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/Button/index.mdx",
+      "value": {
+        "name": "Button",
+        "route": "/components-button",
+        "id": "a08e664b64d63394cab05b2e5d624522",
+        "filepath": "src/components/Button/index.mdx",
+        "fullpath": "C:\\_git\\projects\\ManageEXP\\web\\src\\components\\Button\\index.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-components-button-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button",
+            "depth": 1,
+            "value": "Button"
           }
         ]
       }
