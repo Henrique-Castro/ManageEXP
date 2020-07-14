@@ -6,19 +6,7 @@
       "Introdução",
       "Inicialização do projeto",
       "Tecnologias usadas",
-      {
-        "name": "Componentes",
-        "menu": [
-          "Div",
-          "Typography",
-          "Button",
-          "Header",
-          "Nav",
-          "Listas",
-          "Status",
-          "Form"
-        ]
-      },
+      "Componentes",
       "Utils",
       "Agradecimentos"
     ],
@@ -98,6 +86,46 @@
             "slug": "componentes",
             "depth": 1,
             "value": "Componentes"
+          },
+          {
+            "slug": "div",
+            "depth": 2,
+            "value": "Div"
+          },
+          {
+            "slug": "typography",
+            "depth": 2,
+            "value": "Typography"
+          },
+          {
+            "slug": "button",
+            "depth": 2,
+            "value": "Button"
+          },
+          {
+            "slug": "header",
+            "depth": 2,
+            "value": "Header"
+          },
+          {
+            "slug": "nav",
+            "depth": 2,
+            "value": "Nav"
+          },
+          {
+            "slug": "lists",
+            "depth": 2,
+            "value": "Lists"
+          },
+          {
+            "slug": "status",
+            "depth": 2,
+            "value": "Status"
+          },
+          {
+            "slug": "form",
+            "depth": 2,
+            "value": "Form"
           }
         ]
       }
@@ -116,9 +144,9 @@
         "menu": "",
         "headings": [
           {
-            "slug": "seja-bem-vindo",
+            "slug": "-seja-bem-vindo",
             "depth": 1,
-            "value": "Seja bem vindo"
+            "value": "👋 Seja bem vindo"
           },
           {
             "slug": "repositório-do-projeto",
