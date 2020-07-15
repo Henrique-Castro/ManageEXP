@@ -6,8 +6,12 @@
       "Introdução",
       "Inicialização do projeto",
       "Tecnologias usadas",
-      "Componentes",
-      "Utils",
+      {
+        "name": "Components",
+        "menu": [
+          "Button"
+        ]
+      },
       "Agradecimentos"
     ],
     "version": "0.1.0",
@@ -18,6 +22,27 @@
     "typescript": true
   },
   "entries": [
+    {
+      "key": "src/components/index.mdx",
+      "value": {
+        "name": "Button",
+        "route": "/components/button",
+        "id": "8f6609a989594e49bce5582173f1be02",
+        "filepath": "src/components/index.mdx",
+        "fullpath": "C:\\_git\\projects\\ManageEXP\\web\\src\\components\\index.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-components-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button",
+            "depth": 1,
+            "value": "Button"
+          }
+        ]
+      }
+    },
     {
       "key": "src/docz/about.mdx",
       "value": {
@@ -65,67 +90,6 @@
             "slug": "usando-npm",
             "depth": 4,
             "value": "Usando npm"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/docz/components.mdx",
-      "value": {
-        "name": "Componentes",
-        "route": "/components",
-        "id": "c4114e9c00dacb1f29b8c145fc41dac8",
-        "filepath": "src/docz/components.mdx",
-        "fullpath": "C:\\_git\\projects\\ManageEXP\\web\\src\\docz\\components.mdx",
-        "link": "",
-        "hidden": false,
-        "slug": "src-docz-components",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "componentes",
-            "depth": 1,
-            "value": "Componentes"
-          },
-          {
-            "slug": "div",
-            "depth": 2,
-            "value": "Div"
-          },
-          {
-            "slug": "typography",
-            "depth": 2,
-            "value": "Typography"
-          },
-          {
-            "slug": "button",
-            "depth": 2,
-            "value": "Button"
-          },
-          {
-            "slug": "header",
-            "depth": 2,
-            "value": "Header"
-          },
-          {
-            "slug": "nav",
-            "depth": 2,
-            "value": "Nav"
-          },
-          {
-            "slug": "lists",
-            "depth": 2,
-            "value": "Lists"
-          },
-          {
-            "slug": "status",
-            "depth": 2,
-            "value": "Status"
-          },
-          {
-            "slug": "form",
-            "depth": 2,
-            "value": "Form"
           }
         ]
       }
@@ -214,27 +178,6 @@
             "slug": "agradecimentos",
             "depth": 1,
             "value": "Agradecimentos"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/components/Button/index.mdx",
-      "value": {
-        "name": "Button",
-        "route": "/components-button",
-        "id": "a08e664b64d63394cab05b2e5d624522",
-        "filepath": "src/components/Button/index.mdx",
-        "fullpath": "C:\\_git\\projects\\ManageEXP\\web\\src\\components\\Button\\index.mdx",
-        "link": "",
-        "hidden": false,
-        "slug": "src-components-button-index",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "button",
-            "depth": 1,
-            "value": "Button"
           }
         ]
       }
@@ -2526,11 +2469,11 @@
       "value": []
     },
     {
-      "key": "src/pages/Dashboard/index.tsx",
+      "key": "src/pages/Dominios/index.tsx",
       "value": []
     },
     {
-      "key": "src/pages/Dominios/index.tsx",
+      "key": "src/pages/Dashboard/index.tsx",
       "value": []
     },
     {
@@ -2589,9 +2532,9 @@
               "defaultValue": null,
               "description": "",
               "name": "variant",
-              "required": false,
+              "required": true,
               "type": {
-                "name": "\"def\" | \"logout\" | undefined"
+                "name": "\"def\" | \"logout\""
               }
             }
           }

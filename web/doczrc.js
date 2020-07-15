@@ -4,8 +4,12 @@ export default {
         'Introdução',
         'Inicialização do projeto',
         'Tecnologias usadas',
-        'Componentes',
-        'Utils',
+        {
+            name: 'Components',
+            menu: [
+                'Button'
+            ],
+        },
         'Agradecimentos',
     ],
 };
