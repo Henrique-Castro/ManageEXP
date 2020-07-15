@@ -1,4 +1,3 @@
-# ManageEXP
 <p align="center">
   <img src=".github/Logo.png" height='60px' />
 	
