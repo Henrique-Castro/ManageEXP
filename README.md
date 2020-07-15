@@ -34,7 +34,7 @@
 ---
 ## 🚀 Project Summary
 
-The ManageEXP platform aims to facilitate data control by integrating with Zabbix in an intelligent, fast and simple way!
+The ManageEXP platform aims to facilitate monitoring by integrating with Zabbix in an intelligent, fast and simple way!
  
 ---
 ## 👨‍💻️ Technologies Used
@@ -88,7 +88,7 @@ This project was developed using the technologies bellow:
  
 ## 📦️ How to install the project
 
-> [Node.js](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) are required
+> [Node.js](https://nodejs.org/en/), [Docker](https://www.docker.com/) and [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) are required
 
 To clone the project, use the commands bellow:
 
