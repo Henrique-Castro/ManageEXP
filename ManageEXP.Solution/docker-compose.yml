@@ -1,0 +1,38 @@
+version: '3.4'
+
+networks:
+  webapi-dev:
+    driver: bridge
+
+services:
+  webapi:
+    image: manage-exp-web-api:latest
+    depends_on:
+      - "postgres-image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+       - "8080:80"
+    environment:
+      DB_CONNECTION_STRING: "Server=localhost;Port=5432;Database=ManageExp_database;User Id=root;Password=root;"
+    networks:
+      - webapi-dev
+    
+  postgres-image:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - db_volume:/var/lib/postgressql/data
+      - ./dbscripts/seed.sql :/docker-entrypoint-initdb.d/seed.sql
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "ManageExp_database"
+    networks:
+      - webapi-dev
+
+volumes:
+  db_volume:
