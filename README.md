@@ -1,6 +1,6 @@
 # ManageEXP
 <p align="center">
-  <img src=".github/logo.svg" width='90px' />
+  <img src=".github/Logo.png" height='60px' />
 	
   <p align="center">
   App made to help people to find garbage collection points and recycle!
