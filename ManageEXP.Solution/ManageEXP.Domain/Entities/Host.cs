@@ -4,8 +4,9 @@ using System.Text;
 
 namespace ManageEXP.Domain.Entities
 {
-    public class Host : BasicEntity<int>
+    public class Host : BasicEntity
     {
-        public string Name { get; set; }
+        public int Id { get; set; }
+        public string HostName { get; set; }
     }
 }
