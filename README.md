@@ -6,7 +6,7 @@
   App made to help people to find garbage collection points and recycle!
   </p>
   <p align="center">
-    <img src=".github/cover.png" width='900px' />
+    <img src=".github/Cover.png" width='900px' />
   </p>
 </p>
 
