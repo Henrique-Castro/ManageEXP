@@ -47,7 +47,7 @@ This project was developed using the technologies bellow:
   
 ### Data Base
 
-  - [Postgres](https://www.postgresql.org/)
+  - [Postgre](https://www.postgresql.org/)
   
 ### Frontend
 
@@ -61,9 +61,10 @@ This project was developed using the technologies bellow:
 
   **Backend**
 
-  - []()
-  - []()
-  - []()
+  - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
+  - [Newtonsoft](https://www.newtonsoft.com/json)
+  - [PostgreSQL](https://www.postgresql.org/)
+  
 
   **Frontend**
   - [Typescript](https://www.typescriptlang.org/)
