@@ -1,9 +1,3 @@
-FROM postgres
-
-ENV POSTGRES_PASSWORD root
-ENV POSTGRES_USER root
-ENV POSTGRES_DB manageExp_core
-
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 WORKDIR /app
 
@@ -23,13 +17,12 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "ManageEXP.WebApi.dll"]
 
+# docker build . -t manage-exp-web-api
+# docker run -d -p 8080:80 --name manage-exp-web-api manage-exp-web-api
 
+# Script for database creation if necessary
+# FROM postgres
 
-
-# FROM mcr.microsoft.com/dotnet/core/runtime:3.1
-# COPY ManageEXP.Domain/bin/Release/netcoreapp3.1/ManageEXP.Domain.dll app/
-# COPY ManageEXP.WebApi/bin/Release/netcoreapp3.1/ManageEXP.WebApi.dll app/
-# ENTRYPOINT ["dotnet", "ManageEXP.WebApi.dll"]
-
-# docker build . -t manage-exp-application
-# docker run -d -p 8080:80 --name manage-exp-application manage-exp-application
+# ENV POSTGRES_PASSWORD root
+# ENV POSTGRES_USER root
+# ENV POSTGRES_DB manageExp_database
