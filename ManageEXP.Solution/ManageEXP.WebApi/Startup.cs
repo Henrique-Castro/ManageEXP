@@ -36,11 +36,14 @@ namespace ManageEXP.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+            var connectionString = Configuration.GetConnectionString("ManageExpCoreConnection");
+
             services.AddDbContext<IDomainDbContext, DomainDbContext>(options =>
-                    options.UseNpgsql(Configuration.GetConnectionString("ManageExpCoreConnection")));
+                    options.UseNpgsql(connectionString));
 
             services.AddDbContext<DomainDbContext>(options =>
-                    options.UseNpgsql(Configuration.GetConnectionString("ManageExpCoreConnection")));
+                    options.UseNpgsql(connectionString, builder => { builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null); }));
 
 
             services.AddControllers();
