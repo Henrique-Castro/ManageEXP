@@ -7,7 +7,7 @@ export type Props = {
   disabled?: boolean;
   loading?: boolean;
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
-  variant: ColorsButtonOptions;
+  variant?: ColorsButtonOptions;
 };
 
 export type StyledProps = {
