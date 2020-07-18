@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import { Title, Listas } from "../../components";
 import { ICertificado } from "../../components/Listas/Certificado";
 
-import { handleCertificates } from '../../utils/handleData';
+import api from "../../services/api";
+
+import { handleCertificates } from "../../utils/handleData";
 
 const header = ["Cliente", "Última Atualização", "Dias Restantes"];
 
@@ -31,16 +33,24 @@ const data: ICertificado[] = [
 ];
 
 function Certificados() {
-    const [sortedData, setSortedData] = useState<ICertificado[]>([])
+  const [sortedData, setSortedData] = useState<ICertificado[]>([]);
+  const [certificates, setCertificates] = useState<ICertificado[]>([]);
 
+  useEffect(() => {
+    getCertificates();
+  });
 
   useEffect(() => {
     document.title = "Certificados | ManageEXP";
 
-    const handleData = data.sort(handleCertificates);
+    const handleData = certificates.sort(handleCertificates);
 
     setSortedData(handleData);
   }, []);
+
+  function getCertificates() {
+    api.get("Item").then((res) => setCertificates(res.data));
+  };
 
   return (
     <>
