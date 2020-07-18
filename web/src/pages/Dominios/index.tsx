@@ -4,6 +4,8 @@ import { Title, Listas } from "../../components";
 import { IDominio } from "../../components/Listas/Dominio";
 import { STATUS_DOMAIN } from "../../components/Status/Domain/interface";
 
+import api from "../../services/api";
+
 import { handleDomains } from "../../utils/handleData";
 
 const header = ["Domínio", "Última Atualização", "Status"];
@@ -73,14 +75,23 @@ const data: IDominio[] = [
 
 function Dominios() {
   const [sortedData, setSortedData] = useState<IDominio[]>([]);
+  const [domains, setDomains] = useState<IDominio[]>([]);
+
+  useEffect(() => {
+    getDomains();
+  });
 
   useEffect(() => {
     document.title = "Domínios | ManageEXP";
 
-    const handledData = data.sort(handleDomains);
+    const handledData = domains.sort(handleDomains);
 
     setSortedData(handledData);
   }, []);
+
+  function getDomains() {
+    api.get("Item").then((res) => setDomains(res.data));
+  };
 
   return (
     <>
