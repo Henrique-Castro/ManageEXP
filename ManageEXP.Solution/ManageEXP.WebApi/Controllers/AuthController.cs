@@ -22,18 +22,15 @@ namespace ManageEXP.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> LoginAsync([FromBody]dynamic parameters)
+        public async Task<IActionResult> LoginAsync([FromBody] dynamic parameters)
         {
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("user.login", parameters);
 
-            if (response.error == null)
-            {
-                ZabbixSettings.Token = response.result;
-            }
+            ZabbixSettings.Token = response?.result;
 
             return Ok(response.result);
         }
-        
+
         [HttpPost("Logout")]
         public async Task<IActionResult> LogoutAsync()
         {

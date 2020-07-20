@@ -5,20 +5,7 @@ networks:
     driver: bridge
 
 services:
-  webapi:
-    image: manage-exp-web-api:latest
-    depends_on:
-      - "postgres-image"
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-       - "8080:80"
-    environment:
-      DB_CONNECTION_STRING: "Server=localhost;Port=5432;Database=ManageExp_database;User Id=root;Password=root;"
-    networks:
-      - webapi-dev
-    
+
   postgres-image:
     image: postgres:latest
     ports:
@@ -33,6 +20,22 @@ services:
       POSTGRES_DB: "ManageExp_database"
     networks:
       - webapi-dev
+
+  webapi:
+    image: manage-exp-web-api:latest
+    depends_on:
+      - "postgres-image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+       - "8080:80"
+    environment:
+      DB_CONNECTION_STRING: "Server=localhost;Database=ManageExp_database;User Id=root;Password=root;"
+    networks:
+      - webapi-dev
+    
+  
 
 volumes:
   db_volume:

@@ -20,7 +20,7 @@ namespace ManageEXP.WebApi.Controllers
             _zabbixService = service;
         }
 
-        [HttpGet]
+        [HttpPost("Get")]
         public async Task<IActionResult> GetHostInterface(dynamic parameters)
         {
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("hostinterface.get", parameters);
@@ -28,7 +28,7 @@ namespace ManageEXP.WebApi.Controllers
             return Ok(response.result);
         }
 
-        [HttpPost]
+        [HttpPost("Create")]
         public async Task<IActionResult> CreateHostInterface(dynamic parameters)
         {
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("hostinterface.create", parameters);

@@ -21,7 +21,7 @@ namespace ManageEXP.WebApi.Controllers
             _zabbixService = service;
         }
 
-        [HttpGet]
+        [HttpPost("Get")]
         public async Task<IActionResult> GetHost([FromBody]dynamic parameters)
         {
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("host.get", parameters);
@@ -36,7 +36,7 @@ namespace ManageEXP.WebApi.Controllers
         //     É importante que nos campos groupid e templateid da requisição sejam passados
         //     valores que existem no zabbix.
         //
-        [HttpPost]
+        [HttpPost("Create")]
         public async Task<IActionResult> CreateHost([FromBody]dynamic parameters)
         {
             //ZabbixResponse templateResponse = await _zabbixService.GetZabbixResponseAsync("template.get", JsonConvert.SerializeObject(new { output = "extend" }));
