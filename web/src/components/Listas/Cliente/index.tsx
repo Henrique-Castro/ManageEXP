@@ -13,7 +13,7 @@ export interface ICliente {
   id: number;
   company: string;
   technicalManager: string;
-  domainId: number;
+  domainId: string;
   email: string;
   phoneNumber: string;
 }

@@ -12,86 +12,120 @@ const header = ["Domínio", "Última Atualização", "Status"];
 
 const data: IDominio[] = [
   {
-    dominio: "www.google.com",
+    dominio: "www.youtube.com",
     dataAtualizacao: "18/03/2020",
     status: STATUS_DOMAIN["success"],
   },
   {
-    dominio: "matheuspsantos.dev",
+    dominio: "www.ifnity.io.br",
     dataAtualizacao: "29/06/2020",
-    status: STATUS_DOMAIN["warn"],
+    status: STATUS_DOMAIN["success"],
   },
   {
-    dominio: "www.blocktime.com.br",
+    dominio: "www.cocacola.com.br",
     dataAtualizacao: "29/06/2020",
     status: STATUS_DOMAIN["error"],
   },
   {
-    dominio: "www.uol.com.br",
+    dominio: "www.claro.com.br",
     dataAtualizacao: "18/03/2020",
     status: STATUS_DOMAIN["success"],
   },
   {
-    dominio: "www.google.com",
+    dominio: "www.blocktime.com",
     dataAtualizacao: "18/03/2020",
-    status: STATUS_DOMAIN["success"],
-  },
-  {
-    dominio: "matheuspsantos.dev",
-    dataAtualizacao: "29/06/2020",
-    status: STATUS_DOMAIN["warn"],
-  },
-  {
-    dominio: "www.blocktime.com.br",
-    dataAtualizacao: "29/06/2020",
     status: STATUS_DOMAIN["error"],
   },
   {
     dominio: "www.uol.com.br",
-    dataAtualizacao: "18/03/2020",
+    dataAtualizacao: "29/06/2020",
     status: STATUS_DOMAIN["success"],
   },
   {
-    dominio: "www.google.com",
-    dataAtualizacao: "18/03/2020",
-    status: STATUS_DOMAIN["success"],
-  },
-  {
-    dominio: "matheuspsantos.dev",
+    dominio: "www.disc.com.br",
     dataAtualizacao: "29/06/2020",
     status: STATUS_DOMAIN["warn"],
   },
   {
-    dominio: "www.blocktime.com.br",
-    dataAtualizacao: "29/06/2020",
-    status: STATUS_DOMAIN["error"],
+    dominio: "www.twitter.com.br",
+    dataAtualizacao: "18/03/2020",
+    status: STATUS_DOMAIN["success"],
   },
   {
-    dominio: "www.uol.com.br",
+    dominio: "www.pure.com.br",
     dataAtualizacao: "18/03/2020",
     status: STATUS_DOMAIN["success"],
   },
 ];
 
+interface Domain {
+  itemid: string;
+  name: string;
+  description: string;
+  lastclock: string;
+  lastvalue: string;
+  prevvalue: string;
+  hostid: string;
+}
+
 function Dominios() {
   const [sortedData, setSortedData] = useState<IDominio[]>([]);
-  const [domains, setDomains] = useState<IDominio[]>([]);
-
-  useEffect(() => {
-    getDomains();
-  });
+  const [domains, setDomains] = useState([]);
 
   useEffect(() => {
     document.title = "Domínios | ManageEXP";
 
-    const handledData = domains.sort(handleDomains);
+    sortDomains();
 
-    setSortedData(handledData);
+    getDomains();
   }, []);
 
-  function getDomains() {
-    api.get("Item").then((res) => setDomains(res.data));
-  };
+  async function getDomains() {
+    const filter = {
+      output: [
+        "itemid",
+        "name",
+        "description",
+        "lastclock",
+        "lastvalue",
+        "prevvalue",
+        "hostid",
+      ],
+      selectGroups: "extend",
+      filter: {
+        hostid: "10084",
+      },
+    };
+
+    await api
+      .post("Item/Get", filter)
+      .then((res) => {
+        console.log(res);
+        setDomains(res.data);
+      })
+      .catch((error) => console.log(error));
+
+    filterDomains();
+  }
+
+  function filterDomains() {
+    var PATTERN = "Domínio";
+
+    const filteredItems = domains.filter(function (domain: Domain) {
+      return domain.name.includes(PATTERN);
+    });
+
+    console.log(filteredItems[1]);
+
+    const sort = filteredItems.sort(handleDomains);
+    setDomains(sort);
+  }
+
+  function sortDomains() {
+    const sortData = data.sort(handleDomains);
+
+    setSortedData(sortData);
+  }
 
   return (
     <>

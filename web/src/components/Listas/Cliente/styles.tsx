@@ -12,6 +12,11 @@ export const ClientRow = styled.tr`
     padding-top: 16px;
   }
 
+  > td:first-child,
+  > td:nth-child(3) {
+    font-size: 20px;
+  }
+
   > td + td {
     text-align: center;
   }
@@ -39,8 +44,6 @@ export const CompanyManager = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  width: 20%;
 
   > strong {
     font-family: ${({ theme }) => theme.fonts.robotoBlack};
