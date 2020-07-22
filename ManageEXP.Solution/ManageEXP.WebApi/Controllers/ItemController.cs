@@ -21,7 +21,7 @@ namespace ManageEXP.WebApi.Controllers
             _zabbixService = service;
         }
 
-        [HttpGet]
+        [HttpPost("Get")]
         public async Task<IActionResult> GetItem([FromBody] dynamic parameters)
         {
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("item.get", parameters);
@@ -34,7 +34,7 @@ namespace ManageEXP.WebApi.Controllers
         //     É importante que nos campos hostid e interface da requisição sejam passados
         //     valores que existem no zabbix.
         //
-        [HttpPost]
+        [HttpPost("Create")]
         public async Task<IActionResult> CreateItem([FromBody]dynamic parameters)
         {         
             ZabbixResponse response = await _zabbixService.GetZabbixResponseAsync("item.create", parameters);

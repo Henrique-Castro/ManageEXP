@@ -14,7 +14,7 @@ namespace ManageEXP.WebApi.Controllers
         [HttpGet]
         public IActionResult IsAlive()
         {
-            return Ok("I'm working. :)");
+            return Ok("I am working. :)");
         }
     }
 }

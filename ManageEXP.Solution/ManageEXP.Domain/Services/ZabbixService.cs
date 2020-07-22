@@ -24,6 +24,11 @@ namespace ManageEXP.Domain.Services
 
         public async Task<ZabbixResponse> GetZabbixResponseAsync(string method, dynamic parameters)
         {
+            if(method == "user.login")
+            {
+                ZabbixSettings.Token = string.Empty;
+            }
+
             ZabbixRequest request = new ZabbixRequest(ZabbixSettings.Version, method, parameters, 1, ZabbixSettings.Token);
 
             string jsonResponse = await SendRequestAsync(request);
@@ -47,6 +52,7 @@ namespace ManageEXP.Domain.Services
 
             if (result.error == null)
             {
+                ZabbixSettings.Token = string.Empty;
                 ZabbixSettings.Url = address;
                 return true;
             }
