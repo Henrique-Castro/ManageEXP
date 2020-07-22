@@ -2,7 +2,7 @@
   <img src=".github/Logo.png" height='60px' />
 	
   <p align="center">
-  App made to help people to find garbage collection points and recycle!
+  Facilitating monitoring by integrating with Zabbix in an intelligent, fast and simple way!
   </p>
   <p align="center">
     <img src=".github/Cover.png" width='900px' />
